@@ -34,19 +34,11 @@ const NavbarItems = () => {
         },
         {
             title: "Product",
-             fashionTypes: {
-                "WINTER FASHION": ["Home", "About", "Services", "Contact"],
-                "SUMMER FASHION": ["T-Shirts", "Shorts", "Sandals", "Sunglasses"],
-                "AUTUMN FASHION": ["Jackets", "Boots", "Scarves", "Sweaters"],
-                "SPRING FASHION": ["Dresses", "Cardigans", "Light Jackets", "Sneakers"],
-                "CASUAL WEAR": ["Jeans", "Hoodies", "Sneakers", "T-Shirts"],
-                "FORMAL WEAR": ["Suits", "Ties", "Dress Shoes", "Blazers"],
-                "SPORTSWEAR": ["Running Shoes", "Gym Wear", "Tracksuits", "Compression Wear"],
-                "TRADITIONAL WEAR": ["Sarees", "Kurtas", "Kimonos", "Ethnic Dresses"],
-                "STREET STYLE": ["Graphic Tees", "Cargo Pants", "Sneakers", "Caps"],
-                "LUXURY FASHION": ["Designer Wear", "Jewelry", "Luxury Bags", "High-End Shoes"]
+            fashionTypes: {
+                "SUMMER FASHION": ["T-Shirts", "Jeans", "Shorts", "Sunglasses"],
+                
             },
-            image: "https://themes.pixelstrap.com/multikart/assets/images/menu-banner.jpg",
+            image: "",
         },
         {
             title: "Pages",
@@ -85,7 +77,7 @@ const NavbarItems = () => {
                                                     ? "grid-cols-6"
                                                     : "grid-cols-6";
 
-                                const dropdownPosition = menuItem.title === "Feature" || "Product" ? "left-[-500%]" : "left-0";
+                                const dropdownPosition = menuItem.title === "Feature" ? "left-[-500%]" : "left-0";
 
 
                                 return menuItem.title === "Home" ? (

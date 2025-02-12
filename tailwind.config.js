@@ -7,6 +7,7 @@ export default {
       colors: {
         primary: "#f7f7f7",
         secondary: "rgb(93, 114, 39)",
+        tertiary: "#dafe69",
         grayText: "#777",
         heading: "#222",
       },
@@ -40,6 +41,9 @@ export default {
       },
       backgroundImage: {
         "theme-gradient": "linear-gradient(to right, #5d7227, #203f15)",
+      },
+      screens: {
+        'below900': {'max': '900px'}, 
       },
     },
   },

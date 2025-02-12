@@ -3,6 +3,9 @@ import { FiShoppingCart, FiUser, FiHeart, FiSearch, FiSettings, FiMenu } from 'r
 import Sidebar from './components/Sidebar'
 import NavbarItems from './components/Navbar/navbarItems';
 import HeroSection from './components/HeroSection';
+import BlogSection from './components/BlogSection';
+import Footer from './components/FooterSection';
+import ShopSection from './components/ShopSection';
 
 
 function App() {
@@ -12,7 +15,6 @@ function App() {
     <div className="min-h-screen bg-gray-50">
 
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-      {/* Top Bar */}
       <div className="bg-theme-gradient text-white py-2">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <span>Welcome to Our Store Naturekart</span>
@@ -24,12 +26,10 @@ function App() {
         </div>
       </div>
 
-      {/* Main Header */}
       <header className="bg-white shadow-sm ">
         <div className="container mx-auto px-8 py-8">
           <div className="flex justify-between items-center">
-            {/* Menu Icon to Open Sidebar */}
-            <button className="text-gray-700 hover:text-primary " onClick={() => setIsSidebarOpen(true)}>
+            <button className="text-gray-700 hover:text-primary  " onClick={() => setIsSidebarOpen(true)}>
               <FiMenu size={24} />
             </button>
 
@@ -42,12 +42,16 @@ function App() {
             </div>
 
             <div className="flex items-center space-x-4">
+            <button className="text-gray-700  md:hidden" >
+              <FiMenu size={24} />
+            </button>
               <button className="text-gray-700 hover:text-primary">
                 <FiSearch size={20} />
               </button>
               <button className="text-gray-700 hover:text-primary">
                 <FiSettings size={20} />
               </button>
+      
               <div className="relative">
                 <button className="text-gray-700 hover:text-primary">
                   <FiShoppingCart size={20} />
@@ -65,7 +69,12 @@ function App() {
       </header>
 
       <NavbarItems />
+
       <HeroSection />
+      <ShopSection/>
+      <BlogSection/>
+      <Footer/>
+
     </div>
   )
 }

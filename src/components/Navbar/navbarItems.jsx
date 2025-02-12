@@ -28,7 +28,7 @@ const NavbarItems = () => {
             title: "Shops",
             fashionTypes: {
                 "SUMMER FASHION": ["Home", "About", "Services", "Contact"],
-                
+
             },
             image: "",
         },
@@ -36,7 +36,7 @@ const NavbarItems = () => {
             title: "Product",
             fashionTypes: {
                 "SUMMER FASHION": ["T-Shirts", "Jeans", "Shorts", "Sunglasses"],
-                
+
             },
             image: "",
         },
@@ -49,8 +49,8 @@ const NavbarItems = () => {
         }, {
             title: "Blogs",
             fashionTypes: {
-                "SUMMER FASHION": ["T-Shirts", "Jeans", "Shorts", "Sunglasses","Designer Wear", "Jewelry", "Luxury Bags", "High-End Shoes"],
-          
+                "SUMMER FASHION": ["T-Shirts", "Jeans", "Shorts", "Sunglasses", "Designer Wear", "Jewelry", "Luxury Bags", "High-End Shoes"],
+
             },
             image: "",
         },
@@ -60,7 +60,8 @@ const NavbarItems = () => {
         <>
             <header className="bg-white shadow-sm">
                 <div className="container mx-auto px-8 py-8">
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center invisible sm:visible overflow-hidden">
+
                         <nav className="flex min-w-[20px] flex-row gap-0 p-0 font-sans text-base font-normal text-blue-gray-700">
                             {menuItems.map((menuItem, index) => {
                                 const fashionTypeCount = Object.keys(

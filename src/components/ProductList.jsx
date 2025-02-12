@@ -4,14 +4,14 @@ import { FaHeart, FaShoppingCart, FaSearch } from "react-icons/fa";
 
 const products = [
     {
-        image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/19.jpg",
+        image: "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
         name: "Black Mojito",
         price: "220.00",
         oldPrice: "230.00",
         rating: 4,
     },
     {
-        image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/25.jpg",
+        image: "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
         name: "White Cheery Glato",
         price: "350.00",
         rating: 4,
@@ -23,7 +23,7 @@ const products = [
         rating: 4,
     },
     {
-        image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/22.jpg",
+        image: "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
         name: "Gary Payton",
         price: "200.00",
         oldPrice: "220.00",
@@ -35,13 +35,13 @@ const products = [
         price: "200.00",
         oldPrice: "220.00",
         rating: 4,
-    },  {
+    }, {
         image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/22.jpg",
         name: "Gary Payton",
         price: "200.00",
         oldPrice: "220.00",
         rating: 4,
-    } , {
+    }, {
         image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/22.jpg",
         name: "Gary Payton",
         price: "200.00",
@@ -123,7 +123,7 @@ const ProductList = () => {
                 <h2 className="text-h2 text-heading font-bold mt-2">NEW PRODUCTS</h2>
                 <div className="w-20 border-t-4 border-secondary my-6 mx-auto"></div>
 
-              
+
             </div>
             <motion.div
                 ref={containerRef}

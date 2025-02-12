@@ -2,13 +2,14 @@ import React from "react";
 import WelcomeSection from "./WelcomeSection";
 import FeaturesSection from "./FeaturedSection";
 import ProductList from "./ProductList";
+import BlogSection from "./BlogSection";
 
 const HeroSection = () => {
     return (
         <>
             <div className="relative">
                 <div
-                    className="relative h-[665px] bg-[url('https://themes.pixelstrap.com/multikart/assets/images/marijuana/full-banner/1.jpg')] 
+                    className="relative h-[80vh] bg-[url('https://themes.pixelstrap.com/multikart/assets/images/marijuana/full-banner/1.jpg')] 
               bg-cover bg-center"
                 >
                     <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -24,7 +25,9 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                <div className="absolute top-[70%] left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg ">
+                <div className="absolute  lg:top-[70%] left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg">
+
+
                     <div className="grid grid-cols-2 md:grid-cols-4  px-4">
                         {[
                             {

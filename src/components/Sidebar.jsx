@@ -3,7 +3,7 @@ import { IoArrowBack } from "react-icons/io5";
 const Sidebar = ({ isOpen, onClose }) => {
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-50 z-50 transform transition-transform  transition-opacity duration-700 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+      className={`fixed inset-0 bg-black bg-opacity-50 z-50 transform transition-transform   transition-opacity duration-700 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
       onClick={onClose}
     >
       <div

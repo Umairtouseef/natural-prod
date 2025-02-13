@@ -58,9 +58,9 @@ const NavbarItems = () => {
 
     return (
         <>
-            <header className="bg-white shadow-sm">
-                <div className="container mx-auto px-8 py-8">
-                    <div className="flex justify-center items-center invisible sm:visible overflow-hidden">
+            <header className="bg-white shadow-sm ">
+                <div className="container mx-auto lg:px-8 lg:py-8">
+                <div className="hidden lg:flex justify-center items-center">
 
                         <nav className="flex min-w-[20px] flex-row gap-0 p-0 font-sans text-base font-normal text-blue-gray-700">
                             {menuItems.map((menuItem, index) => {

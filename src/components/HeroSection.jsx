@@ -9,15 +9,18 @@ const HeroSection = () => {
         <>
             <div className="relative">
                 <div
-                    className="relative h-[80vh] bg-[url('https://themes.pixelstrap.com/multikart/assets/images/marijuana/full-banner/1.jpg')] 
+                    className="relative lg:h-[80vh] bg-[url('https://themes.pixelstrap.com/multikart/assets/images/marijuana/full-banner/1.jpg')] 
               bg-cover bg-center"
                 >
                     <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
                     <div className="relative container  mx-auto px-4 h-full flex  justify-center">
-                        <div className="text-white max-w-2xl text-center mt-32">
+                        <div className="text-white max-w-2xl text-center lg:mt-32 mt-16 mb-16">
                             <h2 className="text-2xl mb-2">Special Offer</h2>
-                            <h1 className="text-6xl font-bold mb-6">NATURAL PRODUCTS</h1>
+                            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold mb-6">
+                                NATURAL PRODUCTS
+                            </h1>
+
                             <button className="bg-theme-gradient hover:bg-primary text-white px-8 py-3 rounded-md">
                                 Shop Now
                             </button>
@@ -25,7 +28,7 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                <div className="absolute  lg:top-[70%] left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg">
+                <div className="absolute  lg:top-[77%] left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg">
 
 
                     <div className="grid grid-cols-2 md:grid-cols-4  px-4">
@@ -78,7 +81,7 @@ const HeroSection = () => {
 
             <WelcomeSection />
             <FeaturesSection />
-            <ProductList/>
+            <ProductList />
 
         </>
     );

@@ -22,45 +22,18 @@ const products = [
         price: "225.50",
         rating: 4,
     },
-    {
-        image: "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
-        name: "Gary Payton",
-        price: "200.00",
-        oldPrice: "220.00",
-        rating: 4,
-    },
-    {
-        image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/22.jpg",
-        name: "Gary Payton",
-        price: "200.00",
-        oldPrice: "220.00",
-        rating: 4,
-    }, {
-        image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/22.jpg",
-        name: "Gary Payton",
-        price: "200.00",
-        oldPrice: "220.00",
-        rating: 4,
-    }, {
-        image: "https://themes.pixelstrap.com/multikart/assets/images/marijuana/pro/22.jpg",
-        name: "Gary Payton",
-        price: "200.00",
-        oldPrice: "220.00",
-        rating: 4,
-    }
 ];
 
 const ProductCard = ({ product }) => {
     return (
-        <div className="relative group border rounded-lg overflow-hidden shadow-md hover:shadow-lg bg-white w-[350px]">
+        <div className="relative group border rounded-lg overflow-hidden shadow-md hover:shadow-lg bg-white w-full sm:w-[350px]">
             <div className="relative w-full h-64">
                 <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover"
                 />
-
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
                         <FaSearch size={15} />
                     </button>
@@ -104,37 +77,39 @@ const ProductList = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             if (containerRef.current) {
-                containerRef.current.scrollBy({ left: 300, behavior: "smooth" });
-
+                let productWidth = containerRef.current.firstChild.clientWidth + 24; 
+                containerRef.current.scrollBy({ left: productWidth, behavior: "smooth" });
                 if (containerRef.current.scrollLeft + containerRef.current.clientWidth >= containerRef.current.scrollWidth) {
                     containerRef.current.scrollTo({ left: 0, behavior: "smooth" });
                 }
             }
-        }, 2000);
+        }, 2500);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
         <div className="overflow-hidden px-8 py-8 bg-white">
-
             <div className="text-center">
-                <h4 className="text-secondary font-medium">Special offer</h4>
+                <h4 className="text-secondary font-medium">Special Offer</h4>
                 <h2 className="text-h2 text-heading font-bold mt-2">NEW PRODUCTS</h2>
                 <div className="w-20 border-t-4 border-secondary my-6 mx-auto"></div>
-
-
             </div>
+
             <motion.div
                 ref={containerRef}
-                className="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth py-5"
+                className="flex space-x-6 overflow-x-auto scrollbar-hide scroll-smooth py-5 snap-x snap-mandatory"
             >
                 {products.concat(products).map((product, index) => (
-                    <motion.div key={index} className="min-w-[350px]">
+                   <motion.div 
+                   key={index} 
+                   className="snap-center flex-shrink-0 w-[100%] sm:w-[60%] md:w-[50%] lg:w-[350px]"
+               >
                         <ProductCard product={product} />
                     </motion.div>
                 ))}
             </motion.div>
+
         </div>
     );
 };

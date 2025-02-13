@@ -21,8 +21,13 @@ function App() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
 
-      {/* <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} /> */}
-      <SidebarMobile isOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(false)} />
+<div className="hidden lg:block">
+        <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+    </div>
+
+    <div className="lg:hidden">
+        <SidebarMobile isOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(false)} />
+    </div>
 
       <div className="bg-theme-gradient text-white py-2 hidden lg:block">
         <div className="container mx-auto px-4 flex justify-between items-center">

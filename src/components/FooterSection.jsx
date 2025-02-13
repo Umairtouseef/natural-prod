@@ -71,7 +71,8 @@ const Footer = () => {
                     © 2024-25 themeforest powered by pixelstrap
                 </p>
 
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 mt-8 sm:mt-0 md:mt-0 lg:mt-0 ">
+
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" className="h-6" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" className="h-6" />
                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="MasterCard" className="h-6" />

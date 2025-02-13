@@ -82,6 +82,37 @@ function App() {
       <ShopSection />
       <BlogSection />
       <Footer />
+      <div className="fixed bottom-0 left-0 w-full bg-white shadow-md border-t flex justify-around items-center py-3 md:hidden">
+  <button className="text-gray-500 hover:text-primary flex flex-col items-center">
+    <FiHeart size={20} />
+    <span className="text-xs">Fav</span>
+  </button>
+  
+  <button className="text-gray-500 hover:text-primary flex flex-col items-center relative">
+    <FiShoppingCart size={20} />
+    <span className="text-xs">Cart</span>
+    {cartCount > 0 && (
+      <span className="absolute -top-2 -right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">
+        {cartCount}
+      </span>
+    )}
+  </button>
+
+  <button className="text-gray-500 hover:text-primary flex flex-col items-center">
+    <FiSearch size={20} />
+    <span className="text-xs">Search</span>
+  </button>
+
+  <button className="text-gray-500 hover:text-primary flex flex-col items-center">
+    <FiUser size={20} />
+    <span className="text-xs">Account</span>
+  </button>
+
+  <button className="text-gray-500 hover:text-primary flex flex-col items-center">
+    <FiSettings size={20} />
+    <span className="text-xs">Settings</span>
+  </button>
+</div>
 
     </div>
   )

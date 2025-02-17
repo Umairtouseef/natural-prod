@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import logo from "../../assets/logo.png"
+
 
 const Footer = () => {
     const [showScroll, setShowScroll] = useState(false);
@@ -25,8 +27,9 @@ const Footer = () => {
             <div className="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-center ">
                 <div>
                     <div className="flex justify-center">
+
                         <img
-                            src="https://themes.pixelstrap.com/multikart/assets/images/marijuana/logo-white.png"
+                            src={logo}
                             alt="Naturekart Logo"
                             className="w-40 h-30"
                         />
@@ -68,7 +71,7 @@ const Footer = () => {
 
             <div className="mt-12 border-t border-gray-600 pt-6 flex flex-wrap justify-between items-center">
                 <p className="text-p text-white">
-                    © 2024-25 
+                    © 2024-25
                 </p>
 
                 <div className="flex space-x-4 mt-8 sm:mt-0 md:mt-0 lg:mt-0 ">

@@ -3,6 +3,7 @@ import { FiShoppingCart, FiUser, FiHeart, FiSearch, FiSettings, FiMenu } from 'r
 import { RiMenuUnfoldLine } from "react-icons/ri";
 import { RiMenuFold4Fill } from "react-icons/ri";
 import { RiMenuUnfold2Line } from "react-icons/ri";
+import logo from "./assets/logo.png"
 import Sidebar from './components/Home/Sidebar';
 import SidebarMobile from './components/Home/SidebarMobile';
 import NavbarMobile from './components/Navbar/NavbarItemsMobile';
@@ -50,7 +51,7 @@ function App() {
 
             <div>
               <img
-                src="https://themes.pixelstrap.com/multikart/assets/images/marijuana/logo.png"
+                src={logo}
                 alt="Naturekart Logo"
                 className="w-40 h-30"
               />

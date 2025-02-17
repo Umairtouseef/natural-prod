@@ -102,7 +102,7 @@ const ProductList = () => {
             >
                 {products.concat(products).map((product, index) => (
                    <motion.div 
-                   key={index} 
+                   key={index}   
                    className="snap-center flex-shrink-0 w-[100%] sm:w-[60%] md:w-[50%] lg:w-[350px]"
                >
                         <ProductCard product={product} />

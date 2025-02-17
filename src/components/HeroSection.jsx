@@ -18,7 +18,7 @@ const HeroSection = () => {
                         <div className="text-white max-w-2xl text-center lg:mt-32 mt-16 mb-16">
                             <h2 className="text-2xl mb-2">Special Offer</h2>
                             <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold mb-6">
-                                NATURAL PRODUCTS
+                                NATURAL PRODUCTS 
                             </h1>
 
                             <button className="bg-theme-gradient hover:bg-primary text-white px-8 py-3 rounded-md">
@@ -28,7 +28,7 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                <div className="absolute  lg:top-[77%] left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg">
+                <div className="absolute  lg:top-[50vh] left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg">
 
 
                     <div className="grid grid-cols-2 md:grid-cols-4  px-4">

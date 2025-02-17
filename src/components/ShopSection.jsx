@@ -177,7 +177,7 @@ const ProductFilter = () => {
                                                             <FaHeart size={15} className="text-secondary" />
                                                         </button>
                                                         <button className="bg-white p-3 md:p-4 rounded-full transition duration-300 hover:bg-gray-200">
-                                                            <FaShoppingCart size={15} className="text-secondary" />
+                                                             <FaShoppingCart size={15} className="text-secondary" />
                                                         </button>
                                                     </div>
                                                 </div>
@@ -197,13 +197,17 @@ const ProductFilter = () => {
                                                     {product.oldPrice && <span className="text-gray-500 line-through ml-2">{product.oldPrice}</span>}
                                                 </p>
                                             </div>
-                                        </div>
-                                    </SwiperSlide>
-                                ))}
 
+                                        </div>
+
+                                    </SwiperSlide>
+
+                                ))}
                                 <div className="swiper-button-prev text-white text-bold !top-1/2 -translate-y-1/2  !text-6xl"></div>
                                 <div className="swiper-button-next text-white text-bold  !top-1/2 -translate-y-1/2  !text-6xl"></div>
+
                             </Swiper>
+
 
                         </>
 

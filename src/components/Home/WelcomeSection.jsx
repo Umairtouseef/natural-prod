@@ -4,11 +4,10 @@ const WelcomeSection = () => {
     return (
         <section className="container mx-auto px-6 py-12 bg-white lg:mt-0 md:mt-56 mt-96">
 
-            <div className="text-center">
+                <div className="text-center">
                 <h4 className="text-secondary font-medium">About Us</h4>
                 <h2 className="text-h2 text-heading font-bold mt-2">WELCOME TO MULTI STORE</h2>
                 <div className="w-20 border-t-4 border-secondary my-6 mx-auto"></div>
-
                 <p className="text-grayText text-p leading-normal mt-4 md:max-w-2xl mx-auto">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                     doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore

@@ -1,8 +1,8 @@
 import React from "react";
-import WelcomeSection from "./WelcomeSection";
-import FeaturesSection from "./FeaturedSection";
-import ProductList from "./ProductList";
-import BlogSection from "./BlogSection";
+import WelcomeSection from "../Home/WelcomeSection";
+import FeaturesSection from "../Home/FeaturedSection";
+import ProductList from "../Home/ProductList";
+import BlogSection from "../Home/BlogSection";
 
 const HeroSection = () => {
     return (

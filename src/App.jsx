@@ -3,14 +3,15 @@ import { FiShoppingCart, FiUser, FiHeart, FiSearch, FiSettings, FiMenu } from 'r
 import { RiMenuUnfoldLine } from "react-icons/ri";
 import { RiMenuFold4Fill } from "react-icons/ri";
 import { RiMenuUnfold2Line } from "react-icons/ri";
-import Sidebar from './components/Sidebar'
-import NavbarItems from './components/Navbar/navbarItems';
-import HeroSection from './components/HeroSection';
-import BlogSection from './components/BlogSection';
-import Footer from './components/FooterSection';
-import ShopSection from './components/ShopSection';
-import SidebarMobile from './components/SidebarMobile';
+import Sidebar from './components/Home/Sidebar';
+import SidebarMobile from './components/Home/SidebarMobile';
 import NavbarMobile from './components/Navbar/NavbarItemsMobile';
+import NavbarItems from './components/Navbar/navbarItems';
+import HeroSection from './components/Home/HeroSection';
+import BlogSection from './components/Home/BlogSection';
+import ShopSection from './components/Home/ShopSection';
+import Footer from './components/Home/FooterSection';
+
 
 
 function App() {
@@ -21,13 +22,13 @@ function App() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
 
-<div className="hidden lg:block">
+      <div className="hidden lg:block">
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-    </div>
+      </div>
 
-    <div className="lg:hidden">
+      <div className="lg:hidden">
         <SidebarMobile isOpen={isSidebarOpen} toggleSidebar={() => setIsSidebarOpen(false)} />
-    </div>
+      </div>
 
       <div className="bg-theme-gradient text-white py-2 hidden lg:block">
         <div className="container mx-auto px-4 flex justify-between items-center">
@@ -72,7 +73,7 @@ function App() {
           </div>
         </div>
         <div class="border-t   w-full"></div>
-      <NavbarMobile isOpen={isNavbarOpen} toggleSidebar={() => setIsNavbarOpen(false)} />
+        <NavbarMobile isOpen={isNavbarOpen} toggleSidebar={() => setIsNavbarOpen(false)} />
 
       </header>
 
@@ -83,36 +84,36 @@ function App() {
       <BlogSection />
       <Footer />
       <div className="fixed bottom-0 left-0 w-full bg-white shadow-md border-t flex justify-around items-center py-3 md:hidden">
-  <button className="text-gray-500 hover:text-primary flex flex-col items-center">
-    <FiHeart size={20} />
-    <span className="text-xs">Fav</span>
-  </button>
-  
-  <button className="text-gray-500 hover:text-primary flex flex-col items-center relative">
-    <FiShoppingCart size={20} />
-    <span className="text-xs">Cart</span>
-    {cartCount > 0 && (
-      <span className="absolute -top-2 -right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">
-        {cartCount}
-      </span>
-    )}
-  </button>
+        <button className="text-gray-500 hover:text-primary flex flex-col items-center">
+          <FiHeart size={20} />
+          <span className="text-xs">Fav</span>
+        </button>
 
-  <button className="text-gray-500 hover:text-primary flex flex-col items-center">
-    <FiSearch size={20} />
-    <span className="text-xs">Search</span>
-  </button>
+        <button className="text-gray-500 hover:text-primary flex flex-col items-center relative">
+          <FiShoppingCart size={20} />
+          <span className="text-xs">Cart</span>
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">
+              {cartCount}
+            </span>
+          )}
+        </button>
 
-  <button className="text-gray-500 hover:text-primary flex flex-col items-center">
-    <FiUser size={20} />
-    <span className="text-xs">Account</span>
-  </button>
+        <button className="text-gray-500 hover:text-primary flex flex-col items-center">
+          <FiSearch size={20} />
+          <span className="text-xs">Search</span>
+        </button>
 
-  <button className="text-gray-500 hover:text-primary flex flex-col items-center">
-    <FiSettings size={20} />
-    <span className="text-xs">Settings</span>
-  </button>
-</div>
+        <button className="text-gray-500 hover:text-primary flex flex-col items-center">
+          <FiUser size={20} />
+          <span className="text-xs">Account</span>
+        </button>
+
+        <button className="text-gray-500 hover:text-primary flex flex-col items-center">
+          <FiSettings size={20} />
+          <span className="text-xs">Settings</span>
+        </button>
+      </div>
 
     </div>
   )

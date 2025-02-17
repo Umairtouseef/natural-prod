@@ -68,7 +68,7 @@ const Footer = () => {
 
             <div className="mt-12 border-t border-gray-600 pt-6 flex flex-wrap justify-between items-center">
                 <p className="text-p text-white">
-                    © 2024-25 themeforest powered by pixelstrap
+                    © 2024-25 
                 </p>
 
                 <div className="flex space-x-4 mt-8 sm:mt-0 md:mt-0 lg:mt-0 ">

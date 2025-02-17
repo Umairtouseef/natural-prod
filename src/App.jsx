@@ -3,6 +3,7 @@ import { FiShoppingCart, FiUser, FiHeart, FiSearch, FiSettings, FiMenu } from 'r
 import { RiMenuUnfoldLine } from "react-icons/ri";
 import { RiMenuFold4Fill } from "react-icons/ri";
 import { RiMenuUnfold2Line } from "react-icons/ri";
+import { FaHeart, FaUser } from 'react-icons/fa';
 import logo from "./assets/logo.png"
 import Sidebar from './components/Home/Sidebar';
 import SidebarMobile from './components/Home/SidebarMobile';
@@ -19,6 +20,19 @@ function App() {
   const [cartCount] = useState(0)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+  const [isWishlistFilled, setIsWishlistFilled] = useState(false);
+  const [cartItemCount, setCartItemCount] = useState(2);
+
+  const handleHeartClick = () => {
+    setIsHeartFilled(!isHeartFilled);
+  };
+
+
+  const handleWishlistClick = () => {
+    setIsWishlistFilled(!isWishlistFilled);
+  };
+
+
 
   return (
     <div className="min-h-screen bg-white overflow-hidden">
@@ -36,8 +50,21 @@ function App() {
           <span>Welcome to Our Store Naturekart</span>
           <span>Call Us: 123 - 456 - 7890</span>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-gray-200">Wishlist</a>
-            <a href="#" className="hover:text-gray-200">My Account</a>
+            <a
+              href="#"
+              className="flex items-center gap-2 hover:text-gray-200"
+              onClick={handleWishlistClick}
+            >
+              <FaHeart
+                className={`w-5 h-5 ${isWishlistFilled ? 'text-secondary' : 'text-white'}`}
+              />
+              Wishlist
+            </a>
+
+            <a href="#" className="flex items-center gap-2 hover:text-gray-200">
+              <FaUser className="w-5 h-5" />
+              My Account
+            </a>
           </div>
         </div>
       </div>
@@ -56,20 +83,28 @@ function App() {
                 className="w-40 h-30"
               />
             </div>
-            <button className="text-gray-700 hover:text-primary lg:hidden  " onClick={() => setIsNavbarOpen(true)}>
+            <button className="text-gray-700 lg:hidden  " onClick={() => setIsNavbarOpen(true)}>
               <RiMenuUnfold2Line size={24} />
             </button>
             <div className="flex items-center space-x-4 hidden md:block">
 
-              <button className="text-gray-700 hover:text-primary">
+              <button className="text-gray-700">
                 <FiSearch size={20} />
               </button>
-              <button className="text-gray-700 hover:text-primary">
+              <button className="text-gray-700">
                 <FiSettings size={20} />
               </button>
-              <button className="text-gray-700 hover:text-primary">
+              <button className="text-gray-700 hover:text-heading hover:bg-primary relative">
                 <FiShoppingCart size={20} />
+                {cartItemCount > 0 && (
+                  <span
+                    className="absolute top-[-10px] right-[-10px] w-5 h-5 bg-secondary text-white text-xs font-semibold rounded-full flex items-center justify-center"
+                  >
+                    {cartItemCount}
+                  </span>
+                )}
               </button>
+
             </div>
           </div>
         </div>

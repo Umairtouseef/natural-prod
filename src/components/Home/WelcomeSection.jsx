@@ -2,7 +2,7 @@ import React from "react";
 
 const WelcomeSection = () => {
     return (
-        <section className="container mx-auto px-6 py-12 bg-white lg:mt-0 md:mt-56 mt-96">
+        <section className="container mx-auto px-6 py-12 bg-white lg:mt-0 ">
 
                 <div className="text-center">
                 <h4 className="text-secondary font-medium">About Us</h4>

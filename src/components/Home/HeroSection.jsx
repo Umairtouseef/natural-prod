@@ -10,15 +10,15 @@ const HeroSection = () => {
             <div className="relative">
                 <div
                     className="relative lg:h-[80vh] bg-[url('https://themes.pixelstrap.com/multikart/assets/images/marijuana/full-banner/1.jpg')] 
-              bg-cover bg-center"
+                    bg-cover bg-center"
                 >
                     <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
-                    <div className="relative container  mx-auto px-4 h-full flex  justify-center">
+                    <div className="relative container mx-auto px-4 h-full flex justify-center">
                         <div className="text-white max-w-2xl text-center lg:mt-32 mt-16 mb-16">
                             <h2 className="text-2xl mb-2">Special Offer</h2>
                             <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold mb-6">
-                                NATURAL PRODUCTS 
+                            Buy Marijuana
                             </h1>
 
                             <button className="bg-theme-gradient hover:bg-primary text-white px-8 py-3 rounded-md">
@@ -28,10 +28,9 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                <div className="absolute  lg:top-[50vh] left-1/2 transform -translate-x-1/2 w-full max-w-screen-lg">
-
-
-                    <div className="grid grid-cols-2 md:grid-cols-4  px-4">
+                {/* For medium and below screens, position icon box below the image */}
+                <div className="lg:absolute lg:bottom-0 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:w-full lg:max-w-screen-lg md:mt-16 mt-0">
+                    <div className="grid grid-cols-2 md:grid-cols-4 px-4">
                         {[
                             {
                                 title: "Free Shipping",
@@ -54,7 +53,7 @@ const HeroSection = () => {
                                 icon: "M13 10V3L4 14h7v7l9-11h-7z",
                             },
                         ].map((feature, index) => (
-                            <div key={index} className="bg-white/90 p-6  text-center ">
+                            <div key={index} className="bg-white/90 p-6 text-center">
                                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                                     <svg
                                         className="w-12 h-12 text-secondary"
@@ -69,7 +68,6 @@ const HeroSection = () => {
                                             d={feature.icon}
                                         ></path>
                                     </svg>
-
                                 </div>
                                 <h3 className="font-bold mb-2">{feature.title}</h3>
                                 <p className="text-gray-600 text-sm">{feature.desc}</p>
@@ -82,7 +80,6 @@ const HeroSection = () => {
             <WelcomeSection />
             <FeaturesSection />
             <ProductList />
-
         </>
     );
 };

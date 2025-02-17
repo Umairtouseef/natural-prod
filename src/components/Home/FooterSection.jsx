@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/footerlogo.png"
+
 
 
 const Footer = () => {
@@ -67,20 +68,24 @@ const Footer = () => {
                     <p className="text-p mt-2">Email Us: Support@Multikart.com</p>
                     <p className="text-p mt-2">Fax: 123456</p>
                 </div>
+
+
             </div>
+            <div className="container mx-auto px-6 grid grid-cols-0 md:grid-cols-0 gap-8 text-center md:text-center">
+                <div className="mt-12 border-t border-gray-600 flex justify-between items-center w-full px-8 py-8">
+                    <p className="text-p text-white">
+                        © 2024-25
+                    </p>
 
-            <div className="mt-12 border-t border-gray-600 pt-6 flex flex-wrap justify-between items-center">
-                <p className="text-p text-white">
-                    © 2024-25
-                </p>
-
-                <div className="flex space-x-4 mt-8 sm:mt-0 md:mt-0 lg:mt-0 ">
-
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" className="h-6" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" className="h-6" />
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="MasterCard" className="h-6" />
+                    <div className="flex space-x-4 mt-8 sm:mt-0 md:mt-0 lg:mt-0">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" className="h-6" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" className="h-6" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="MasterCard" className="h-6" />
+                    </div>
                 </div>
             </div>
+
+
 
             {showScroll && (
                 <button

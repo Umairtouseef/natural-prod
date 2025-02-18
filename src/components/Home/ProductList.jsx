@@ -89,7 +89,7 @@
         }, []);
 
         return (
-            <div className="overflow-hidden px-6 py-12 bg-white">
+            <div className="overflow-hidden px-8 sm:px-16 lg:px-16 xl:px-72 py-8 bg-white">
                 <div className="text-center">
                     <h4 className="text-secondary font-medium">Special Offer</h4>
                     <h2 className="text-h2 text-heading font-bold mt-2">NEW PRODUCTS</h2>

@@ -125,10 +125,10 @@ function App() {
         <NavbarMobile isOpen={isNavbarOpen} toggleSidebar={() => setIsNavbarOpen(false)} />
 
       </header>
+  <Cart   isOpen={isCartOpen} setIsOpen={setIsCartOpen} />
       <NavbarItems />
 
       <HeroSection />
-      
       <ShopSection />
       <BlogSection />
       <Footer />

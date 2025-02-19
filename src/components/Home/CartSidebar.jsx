@@ -71,7 +71,7 @@ const Cart = ({ isOpen, setIsOpen }) => {
                     </h2>
                     <button
                         onClick={() => setIsOpen(false)}
-                        className="text-grayText text-xl"
+                        className="text-grayText text-4xl"
                     >
                         &times;
                     </button>

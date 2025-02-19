@@ -70,7 +70,6 @@ const NavbarMobile = ({ isOpen, toggleSidebar }) => {
       }`}
       onClick={toggleSidebar}
     >
-      {/* Sidebar opens from the right */}
       <div
         className={`fixed right-0 top-0 w-80 h-full bg-white shadow-lg transition-transform duration-700 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"

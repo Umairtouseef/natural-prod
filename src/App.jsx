@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { FiShoppingCart, FiUser, FiHeart, FiSearch, FiSettings, FiMenu } from 'react-icons/fi'
+import { FiShoppingCart, FiUser, FiHeart, FiSearch, FiSettings, FiMenu,FiPhone } from 'react-icons/fi'
+import { FaPhoneAlt } from "react-icons/fa";
 import { RiMenuUnfoldLine } from "react-icons/ri";
 import { RiMenuFold4Fill } from "react-icons/ri";
 import { RiMenuUnfold2Line } from "react-icons/ri";
@@ -13,6 +14,7 @@ import HeroSection from './components/Home/HeroSection';
 import BlogSection from './components/Home/BlogSection';
 import ShopSection from './components/Home/ShopSection';
 import Footer from './components/Home/FooterSection';
+import Cart from './components/Home/CartSidebar';
 
 
 
@@ -21,7 +23,10 @@ function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [isWishlistFilled, setIsWishlistFilled] = useState(false);
-  const [cartItemCount, setCartItemCount] = useState(2);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  
+  const cartItemCount = 3; 
 
   const handleHeartClick = () => {
     setIsHeartFilled(!isHeartFilled);
@@ -47,8 +52,16 @@ function App() {
 
       <div className="bg-theme-gradient text-white py-2 hidden lg:block">
         <div className="container mx-auto px-4 flex justify-between items-center">
-          <span>Welcome to Our Store Naturekart</span>
-          <span>Call Us: 123 - 456 - 7890</span>
+        <div className="flex flex-row items-center gap-8 flex-nowrap">
+  <span>Welcome to Our Store Marijuana</span>
+  
+  <span className="flex items-center gap-2">
+    <FaPhoneAlt className="w-4 h-4" />
+    Call Us: 123 - 456 - 7890
+  </span>
+</div>
+
+
           <div className="flex gap-4">
             <a
               href="#"
@@ -94,17 +107,17 @@ function App() {
               <button className="text-gray-700">
                 <FiSettings size={20} />
               </button>
-              <button className="text-gray-700 hover:text-heading hover:bg-primary relative">
-                <FiShoppingCart size={20} />
-                {cartItemCount > 0 && (
-                  <span
-                    className="absolute top-[-10px] right-[-10px] w-5 h-5 bg-secondary text-white text-xs font-semibold rounded-full flex items-center justify-center"
-                  >
-                    {cartItemCount}
-                  </span>
-                )}
-              </button>
-
+              <button
+        onClick={() => setIsCartOpen(true)}
+        className="text-gray-700 hover:text-heading hover:bg-primary relative"
+      >
+        <FiShoppingCart size={24} />
+        {cartItemCount > 0 && (
+          <span className="absolute top-[-10px] right-[-10px] w-5 h-5 bg-secondary text-white text-xs font-semibold rounded-full flex items-center justify-center">
+            {cartItemCount}
+          </span>
+        )}
+      </button>
             </div>
           </div>
         </div>
@@ -112,10 +125,10 @@ function App() {
         <NavbarMobile isOpen={isNavbarOpen} toggleSidebar={() => setIsNavbarOpen(false)} />
 
       </header>
-
       <NavbarItems />
 
       <HeroSection />
+      
       <ShopSection />
       <BlogSection />
       <Footer />

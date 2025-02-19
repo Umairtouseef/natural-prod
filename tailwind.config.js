@@ -18,6 +18,7 @@ export default {
         p: "14px",
         h1: "60px",
         h2: "32px",
+        h3: "24px",
         h4: "18px",
         h6: "16px",
       },

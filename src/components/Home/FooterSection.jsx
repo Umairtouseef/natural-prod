@@ -44,14 +44,14 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h2 className="text-h2 font-bold text-white mb-4">NEWSLETTER</h2>
+                    <h2 className="text-h2 font-bold text-white mb-4 ">NEWSLETTER</h2>
                     <div className="bg-white rounded-lg p-2 grid grid-cols-1 md:flex gap-3">
                         <input
                             type="email"
                             placeholder="Enter your email"
-                            className="w-full p-3 text-gray-700 outline-none"
+                            className="w-full p-3 text-gray-700 outline-none !mt-0"
                         />
-                        <button className="bg-secondary text-white px-6 py-3 rounded-lg font-medium w-full md:w-auto">
+                        <button className="bg-secondary text-white px-6 py-3 rounded-lg font-medium w-full !mt-0  md:w-auto">
                             Subscribe
                         </button>
                     </div>

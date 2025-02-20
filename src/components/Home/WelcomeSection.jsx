@@ -6,7 +6,7 @@ const WelcomeSection = () => {
 
                 <div className="text-center">
                 <h4 className="text-secondary font-medium">About Us</h4>
-                <h2 className="text-h2 text-heading font-bold mt-2">WELCOME TO Marijuana STORE</h2>
+                <h2 className=" text-heading font-bold mt-2">WELCOME TO Marijuana STORE</h2>
                 <div className="w-20 border-t-4 border-secondary my-6 mx-auto"></div>
                 <p className="text-grayText text-p leading-normal mt-4 md:max-w-2xl mx-auto">
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium

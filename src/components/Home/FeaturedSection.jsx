@@ -19,7 +19,7 @@ const FeatureCard = ({ icon, title, description }) => {
                     ></path>
                 </svg>
             </div>
-            <h3 className="text-h4 font-bold text-heading">{title}</h3>
+            <h4 className=" font-bold text-heading">{title}</h4>
             <p className="text-grayText text-p mt-2">{description}</p>
         </div>
     );

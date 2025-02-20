@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const NavbarItems = () => {
+    const navigate = useNavigate();
     const menuItems = [
         {
             title: "Home",
@@ -81,27 +83,16 @@ const NavbarItems = () => {
                                 const dropdownPosition = menuItem.title === "Feature" ? "left-[-500%]" : "left-0";
 
 
-                                return menuItem.title === "Home" ? (
-                                    <div key={index} className="relative w-full ml-5 ">
+                                return menuItem.title === "Home" ? (    
+                                    <div key={index} className="relative w-full ml-5  ">
                                         <div className="relative flex items-center w-full p-0  text-left select-none text-blue-gray-900 ml-5">
                                             <span class="relative flex items-center justify-between w-full group cursor-pointer  ">
-                                                <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900  ml-5">
+                                                <h4 
+                                                 onClick={() => navigate("/")}
+                                                class="block   ml-5">
                                                     {menuItem.title}
-                                                </p>
-                                                {menuItem.title !== "Home" && (
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        className="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 "
-                                                        viewBox="0 0 20 20"
-                                                        fill="currentColor"
-                                                    >
-                                                        <path
-                                                            fillRule="evenodd"
-                                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                                            clipRule="evenodd"
-                                                        />
-                                                    </svg>
-                                                )}
+                                                </h4>
+                                               
 
 
                                             </span>
@@ -109,13 +100,13 @@ const NavbarItems = () => {
                                 ) : (
                                     <div key={index} className="relative w-full ml-5 ">
                                         <div className="relative flex items-center w-full p-0  text-left select-none text-blue-gray-900 ml-0">
-                                            <span className="relative flex items-center justify-between w-full group cursor-pointer mt-1">
-                                                <p className="block  ml-4">
+                                            <span className="relative flex items-center justify-between w-full group cursor-pointer ">
+                                                <h4 className="block  ml-4">
                                                     {menuItem.title}
-                                                </p>
+                                                </h4>
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
-                                                    class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 "
+                                                    class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mt-3"
                                                     viewBox="0 0 20 20"
                                                     fill="currentColor"
                                                 >
@@ -139,9 +130,9 @@ const NavbarItems = () => {
                                                                 {Object.entries(menuItem.fashionTypes).map(
                                                                     ([fashionType, links], typeIndex) => (
                                                                         <div key={typeIndex}>
-                                                                            <h3 className="text-black-500 font-medium mt-2">
+                                                                            <h4 className="font-medium ">
                                                                                 {fashionType}
-                                                                            </h3>
+                                                                            </h4>
                                                                             <ul className="text-gray-500 dark:text-gray-400 font-medium">
                                                                                 {links.map((link, linkIndex) => (
                                                                                     <li key={linkIndex} className="mb-2">

@@ -26,9 +26,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     Clothing
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -127,9 +127,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     Bags
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -173,9 +173,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     Footwear
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -218,9 +218,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     Watches
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -263,9 +263,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     Accessories
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -308,9 +308,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     House Of Design
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -353,9 +353,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     Beauty & Personal Care
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -400,9 +400,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     Home & Decor
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -445,9 +445,9 @@ const Sidebar = ({ isOpen, onClose }) => {
 
                 <span class="relative flex items-center justify-between w-full group cursor-pointer">
 
-                  <p class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
+                  <h5 class="block font-sans text-base antialiased font-normal leading-relaxed text-blue-gray-900 ml-4">
                     Kitchen
-                  </p>
+                  </h5>
 
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mr-4" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />

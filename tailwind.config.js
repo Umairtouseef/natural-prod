@@ -1,50 +1,50 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ["./index.html", "./src/**/*.{js,jsx}"],
 
+module.exports = {
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
         primary: "#f7f7f7",
         secondary: "rgb(93, 114, 39)",
         tertiary: "#dafe69",
-        grayText: "#777",
+        mainText: "#777",
         heading: "#222",
-      },
-      fontFamily: {
-        sans: ["Montserrat", "sans-serif"],
+        paragraph: "#cfd4da",
+        yellowbg: "#cfc09f",
+        text: "rgb(0, 0, 0)",
       },
       fontSize: {
-        p: "14px",
-        h1: "60px",
-        h2: "32px",
-        h3: "24px",
-        h4: "18px",
-        h6: "16px",
+        small: "14px",
+        medium: "25px",
+        large: "40px",
+        xl: "60px",
       },
       fontWeight: {
-        normal: "400",
-        medium: "500",
-        bold: "700",
+        primary: "400",
+        secondary: "500",
+        tertiary: "600",
       },
       lineHeight: {
-        normal: "1.5",
-        relaxed: "1.75",
-        tight: "1.25",
-        h1: "1.2",
-        h2: "1",
-        h4: "1",
+        primary: "1.7em",
+        secondary: "1.1em",
+        tertiary: "1em",
       },
       letterSpacing: {
-        wide: "0.06em",
-        wider: "0.03em",
-        widest: "0.02em",
+        primary: "-0.6px",
+        wider: "0.1em",
+        widest: "0.25em",
       },
+      
       backgroundImage: {
         "theme-gradient": "linear-gradient(to right, #5d7227, #203f15)",
+        "primary-gradient": "url('../assets/backgroundgradient.png')",
+      },
+      fontFamily: {
+        primary: "'Montserrat', serif",
+        secondary: "'DM Sans', sans-serif",
       },
       screens: {
-        'below900': {'max': '900px'}, 
+        below900: { max: "900px" },
       },
     },
   },

@@ -61,7 +61,7 @@ const BlogSection = () => {
                             <img src={blog.image} alt="Blog" className="w-full h-48 object-cover" />
                             <div className="p-4 text-center">
                                 <h4 className="text-secondary font-medium">{blog.date}</h4>
-                                <h4 className="text-heading text-h4 font-bold leading-h4 mt-6">{blog.title}</h4>
+                                <h4 className="text-heading  font-bold  tracking-wider mt-6">{blog.title}</h4>
                                 <div className="w-20 border-t-4 border-secondary my-6 mx-auto"></div>
                                 <p className="text-grayText text-p ">
                                     by: {blog.author}, {blog.comments} Comment

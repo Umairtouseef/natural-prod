@@ -27,8 +27,8 @@ const HeroSection = () => {
 
                     <div className="relative container mx-auto px-4 h-full flex justify-center">
                         <div className="text-white max-w-2xl text-center lg:mt-32 mt-16 mb-16">
-                            <h2 className="text-2xl mb-2">Special Offer</h2>
-                            <h1 className="text-4xl sm:text-4xl md:text-6xl font-bold mb-6">
+                            <h3 className="text-white mb-2 font-bold leading-widest tracking-widest ">Special Offer</h3>
+                            <h1 className=" text-white  font-bold mb-6">
                                 Buy Marijuana
                             </h1>
 
@@ -53,13 +53,13 @@ const HeroSection = () => {
                                             "w-10 h-10 text-gray-700 transition-colors duration-300 hover:text-secondary",
                                     })}
                                 </motion.div>
-                                <motion.h3
+                                <motion.h4
                                     className="font-bold mb-2"
                                     whileHover={{ color: "rgb(93, 114, 39)" }}
                                     transition={{ duration: 0.3 }}
                                 >
                                     {feature.title}
-                                </motion.h3>
+                                </motion.h4>
                                 <p className="text-gray-600 text-sm hover:text-secondary ">{feature.desc}</p>
                             </div>
                         ))}

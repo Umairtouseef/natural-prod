@@ -115,15 +115,15 @@ const ProductFilter = () => {
     
         <div className="relative flex flex-col justify-center items-center lg:flex-row gap-8 w-full">
             <aside className="w-full lg:w-[25%] p-6 text-white z-10">
-                <h2 className="text-h2 font-bold text-tertiary">Our Shop</h2>
-                <h3 className="text-h2 font-medium mt-2 mb-4">Buy Products</h3>
+                <h4 className="text-h2 font-bold text-tertiary">Our Shop</h4>
+                <h3 className="font-medium text-white mt-2 mb-4">Buy Products</h3>
     
                 <ul className="border-t border-gray-500 pt-4 flex lg:flex-col overflow-x-auto space-x-4 lg:space-x-0 lg:space-y-3 scrollbar-hide">
                     {categories.map((category) => (
                         <li
                             key={category}
                             onClick={() => setActiveCategory(category)}
-                            className={`cursor-pointer text-h4 py-2 border-b lg:border-none border-gray-500 transition-colors whitespace-nowrap ${activeCategory === category ? "text-tertiary font-bold" : "text-white"}`}
+                            className={`cursor-pointer font-bold text-h4 py-2 border-b lg:border-none border-gray-500 transition-colors whitespace-nowrap ${activeCategory === category ? "text-tertiary font-bold" : "text-white"}`}
                         >
                             {category}
                         </li>
@@ -160,21 +160,22 @@ const ProductFilter = () => {
                                             className="w-full h-full object-cover"
                                         />
                                         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <button className="bg-white mb-3 p-3 md:p-4 rounded-full transition duration-300 hover:bg-gray-200">
-                                                <FaSearch size={15} className="text-secondary" />
-                                            </button>
+                                                
                                         </div>
                                         <div className="absolute bottom-2 left-2 right-2 flex flex-col items-center opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 transition-all duration-300 ease-out">
-                                            <button className="bg-white text-secondary px-6 py-2 mb-2 transition duration-300 hover:bg-gray-200">
+                                        <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
+                                                    <FaSearch size={15} />
+                                                </button>
+                                            <button className="bg-white text-secondary px-6 py-2 mb-2 transition duration-300 hover:bg-secondary hover:text-white">
                                                 Add to Cart
                                             </button>
                                             <div className="flex gap-4">
-                                                <button className="bg-white p-3 md:p-4 rounded-full transition duration-300 hover:bg-gray-200">
-                                                    <FaHeart size={15} className="text-secondary" />
-                                                </button>
-                                                <button className="bg-white p-3 md:p-4 rounded-full transition duration-300 hover:bg-gray-200">
-                                                    <FaShoppingCart size={15} className="text-secondary" />
-                                                </button>
+                                                    <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
+                                                                          <FaHeart size={15} />
+                                                                      </button>
+                                                    <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
+                                                                          <FaShoppingCart size={15} />
+                                                                      </button>
                                             </div>
                                         </div>
                                     </div>

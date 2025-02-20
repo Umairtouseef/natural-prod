@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <h2 className="text-h2 font-bold mb-4">NEWSLETTER</h2>
+                    <h2 className="text-h2 font-bold text-white mb-4">NEWSLETTER</h2>
                     <div className="bg-white rounded-lg p-2 grid grid-cols-1 md:flex gap-3">
                         <input
                             type="email"

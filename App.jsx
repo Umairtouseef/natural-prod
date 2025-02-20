@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CheckoutPage from "./src/Pages/CheckoutPage";
+import CheckoutPage from "./src/Pages/Checkout";
 import Home from "./src/Pages/Home";
-import Checkout from "./src/Pages/CheckoutPage";
+import Checkout from "./src/Pages/Checkout";
 
 const App = () => {
   return (

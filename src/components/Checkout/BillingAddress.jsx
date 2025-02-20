@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AddressSelector from "./AddressSelector";
+import Modal from "../Modal/Modal";
 
 const addresses = [
   {
@@ -26,22 +27,68 @@ const addresses = [
 ];
 
 const BillingAddress = () => {
-  const [selectedAddress, setSelectedAddress] = useState(addresses[0].id);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedAddress, setSelectedAddress] = useState(null);
 
+  const countryOptions = ["Austria", "Germany", "France"];
+  const stateOptions = ["Argentina/Ch", "California", "Texas"];
+
+  const [formData, setFormData] = useState({
+    title: "",
+    address: "",
+    phone: "",
+    country: countryOptions[0],
+    state: stateOptions[0],
+    city: "",
+    pincode: "",
+  });
+
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const fields = [
+    { name: "title", label: "Title", placeholder: "Enter Title" },
+    { name: "address", label: "Address", placeholder: "Enter Address" },
+    {
+      name: "phone",
+      label: "Phone Number",
+      placeholder: "Enter Your Phone Number",
+    },
+    {
+      name: "country",
+      label: "Country",
+      type: "select",
+      options: countryOptions,
+    },
+    { name: "state", label: "State", type: "select", options: stateOptions },
+    { name: "city", label: "City", placeholder: "Enter City" },
+    { name: "pincode", label: "PinCode", placeholder: "Enter PinCode" },
+  ];
   return (
     <div className="p-8">
       <AddressSelector
         addresses={addresses}
         selectedAddress={selectedAddress}
         onSelect={setSelectedAddress}
-        onAddNew={() => alert("Open Add New Address Modal")}
+        onAddNew={() => setIsModalOpen(true)}
+
         fieldLabels={{
-          title: "Shipping Address",
-          addNew: "Add Address",    
+          title: "Billing Address",
+          addNew: "Add Address",
           address: "Street Address",
           pincode: "Postal Code",
           phone: "Contact Number",
         }}
+      />
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Add New Address"
+        fields={fields}
+        formData={formData}
+        onChange={handleInputChange}
       />
     </div>
   );

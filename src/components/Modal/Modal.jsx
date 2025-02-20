@@ -5,7 +5,9 @@ const Modal = ({
   isOpen,
   onClose,
   title,
-  children,
+  fields = [],
+  formData = {},
+  onChange,
   size = "md",
   showCloseButton = true,
 }) => {
@@ -45,7 +47,54 @@ const Modal = ({
         )}
 
         {title && <h2 className="text-lg font-semibold mb-4">{title}</h2>}
-        <div className="mt-2">{children}</div>
+
+        <form>
+          {fields.map((field) => (
+            <div key={field.name} className="mb-4">
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                {field.label}
+              </label>
+              {field.type === "select" ? (
+                <select
+                  name={field.name}
+                  value={formData[field.name] || ""}
+                  onChange={onChange}
+                  className="w-full border px-3 py-2 rounded"
+                >
+                  {field.options.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  type={field.type || "text"}
+                  name={field.name}
+                  value={formData[field.name] || ""}
+                  placeholder={field.placeholder}
+                  onChange={onChange}
+                  className="w-full border px-3 py-2 rounded"
+                />
+              )}
+            </div>
+          ))}
+          <div className="flex justify-between mt-4">
+            <button
+              type="button"
+              onClick={onClose}
+              className="border px-4 py-2 rounded"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="bg-secondary text-white px-4 py-2 rounded"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

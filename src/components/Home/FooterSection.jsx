@@ -61,13 +61,12 @@ const Footer = () => {
 
                 <div>
                     <h4 className="text-h4 font-bold mb-4">STORE INFORMATION</h4>
-                    <p className="text-p leading-relaxed">
-                        Marijuana Demo Store, <br />
-                        Demo store India 345-659
+                    <p className=" text-white text-p leading-relaxed mt-2">
+                        Marijuana Demo Store, 
                     </p>
-                    <p className="text-p mt-2">Call Us: 123-456-7898</p>
-                    <p className="text-p mt-2">Email Us: Support@Marijuana.com</p>
-                    <p className="text-p mt-2">Fax: 123456</p>
+                    <p className="text-white text-p leading-relaxed mt-2">Call Us: 123-456-7898</p>
+                    <p className="text-white text-p leading-relaxed mt-2">Email Us: Support@Marijuana.com</p>
+                    <p className="text-white text-p leading-relaxed mt-2">Fax: 123456</p>
                 </div>
 
 

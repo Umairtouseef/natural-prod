@@ -12,7 +12,7 @@ const Cart = ({ isOpen, setIsOpen }) => {
       price: 6.74,
       quantity: 1,
       image:
-        "https://themes.pixelstrap.com/multikart/assets/images/marijuana/banner/1.png",
+        "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const Cart = ({ isOpen, setIsOpen }) => {
       price: 7.84,
       quantity: 1,
       image:
-        "https://themes.pixelstrap.com/multikart/assets/images/marijuana/banner/1.png",
+        "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ const Cart = ({ isOpen, setIsOpen }) => {
       price: 3.84,
       quantity: 2,
       image:
-        "https://themes.pixelstrap.com/multikart/assets/images/marijuana/banner/1.png",
+        "https://cdn.mos.cms.futurecdn.net/fhLfnNSZdVKGXJgaURaVBP-1280-80.jpg.webp",
     },
   ];
 
@@ -143,7 +143,7 @@ const Cart = ({ isOpen, setIsOpen }) => {
               />
               <div className="flex-1 ml-4">
                 <h5 className=" font-bold text-heading">{item.name}</h5>
-                <p className="text-grayText text-sm">
+                <p className="text-black">
                   {item.quantity} X ${item.price.toFixed(2)}
                 </p>
               </div>

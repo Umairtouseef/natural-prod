@@ -193,6 +193,7 @@ const Cart = ({ isOpen, setIsOpen }) => {
               type="button"
               className="flex-1 bg-secondary text-white py-3 rounded hover:bg-opacity-80"
               aria-label="View Cart"
+              onClick={() => navigate("/cart")}
             >
               View Cart
             </button>

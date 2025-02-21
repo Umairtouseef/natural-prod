@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import CheckoutPage from "./src/Pages/Checkout";
 import Home from "./src/Pages/Home";
 import Checkout from "./src/Pages/Checkout";
+import Cart from "./src/Pages/Cart";
 
 const App = () => {
   return (
@@ -10,7 +10,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
-      </Routes>
+        <Route path="/cart" element={<Cart />} />
+
+      </Routes> 
     </Router>
   );
 };

@@ -13,9 +13,7 @@
       background-color: var(--primary-background-color);
     }
 
-    h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote, table, th, td, form, input, textarea, button ,span{
-      @apply mt-3;
-    }
+    
     h1 {
       @apply text-xl text-text font-primary tracking-primary leading-tertiary;
     }

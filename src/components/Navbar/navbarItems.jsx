@@ -106,7 +106,7 @@ const NavbarItems = () => {
                                                 </h4>
                                                 <svg
                                                     xmlns="http://www.w3.org/2000/svg"
-                                                    class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 mt-3"
+                                                    class="w-4 h-4 text-blue-gray-900 transition-transform group-hover:rotate-180 "
                                                     viewBox="0 0 20 20"
                                                     fill="currentColor"
                                                 >

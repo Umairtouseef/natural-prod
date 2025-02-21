@@ -9,7 +9,7 @@ module.exports = {
         tertiary: "#dafe69",
         mainText: "#777",
         heading: "#222",
-        paragraph: "#cfd4da",
+        paragraph: "gray",
         yellowbg: "#cfc09f",
         text: "rgb(0, 0, 0)",
       },

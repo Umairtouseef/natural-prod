@@ -95,13 +95,13 @@ const Layout = ({ children }) => {
             >
               <RiMenuUnfoldLine size={24} />
             </button>
-
             <div>
               <img
-                                                 onClick={() => navigate("/")}
-              
-              
-              src={logo} alt="Naturekart Logo" className="w-40 h-30 cursor-pointer" />
+                onClick={() => navigate("/")}
+                src={logo}
+                alt="Naturekart Logo"
+                className="w-40 h-30 cursor-pointer"
+              />
             </div>
             <button
               className="text-gray-700 lg:hidden  "

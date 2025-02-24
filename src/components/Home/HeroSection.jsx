@@ -56,7 +56,7 @@ const HeroSection = () => {
                                 <motion.h4
                                     className="font-bold mb-2"
                                     whileHover={{ color: "rgb(93, 114, 39)" }}
-                                    transition={{ duration: 0.3 }}
+                                    transition={{ duration: 0.3 }}  
                                 >
                                     {feature.title}
                                 </motion.h4>

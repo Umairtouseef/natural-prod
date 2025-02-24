@@ -130,7 +130,7 @@ const NavbarItems = () => {
                                                                 {Object.entries(menuItem.fashionTypes).map(
                                                                     ([fashionType, links], typeIndex) => (
                                                                         <div key={typeIndex}>
-                                                                            <h4 className="font-medium ">
+                                                                            <h4 className="font-medium">
                                                                                 {fashionType}
                                                                             </h4>
                                                                             <ul className="text-gray-500 dark:text-gray-400 font-medium">

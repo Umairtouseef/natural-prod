@@ -141,7 +141,7 @@ const Layout = ({ children }) => {
       <main className="flex-grow">{children}</main>
 
       <Footer />
-      <div className="fixed bottom-0 left-0 w-full bg-white shadow-md border-t flex justify-around items-center py-3 md:hidden">
+      {/* <div className="fixed bottom-0 left-0 w-full bg-white shadow-md border-t flex justify-around items-center py-3 md:hidden">
         <button className="text-gray-500 hover:text-primary flex flex-col items-center">
           <FiHeart size={20} />
           <span className="text-xs">Fav</span>
@@ -171,7 +171,7 @@ const Layout = ({ children }) => {
           <FiSettings size={20} />
           <span className="text-xs">Settings</span>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

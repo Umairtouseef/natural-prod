@@ -8,6 +8,8 @@
     @apply tracking-wider font-secondary text-text;
   }
 
+
+  
   @layer base {
     body {
       background-color: var(--primary-background-color);
@@ -36,3 +38,13 @@
       }
     }
   }
+
+
+  .swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  

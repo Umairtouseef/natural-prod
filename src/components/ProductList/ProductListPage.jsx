@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FilterConfig from "./filterConfig";
 import FilterSidebar from "../CustomFilterComponent";
 import ProductCard from "./ProductCard";
+import Pagination from "../Pagination/Pagination";
 
 const products = [
   {
@@ -77,7 +78,6 @@ const products = [
     oldPrice: "25.99",
     rating: 5,
   },
-  
 ];
 
 const ProductListComponent = () => {
@@ -88,6 +88,16 @@ const ProductListComponent = () => {
     ratings: [],
     price: 0,
   });
+
+  const totalPages = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedLayout, setSelectedLayout] = useState("lg:grid-cols-2");
+  const [gridColumns, setGridColumns] = useState("lg:grid-cols-2");
+  const handlePageChange = (newPage) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+    }
+  };
 
   const handleFilterChange = (key, value) => {
     setSelectedFilters((prevFilters) => {
@@ -101,12 +111,15 @@ const ProductListComponent = () => {
     });
   };
 
+  const changeGridLayout = (columns) => {
+    setSelectedLayout(columns);
+    setGridColumns(columns);
+  };
+
   return (
-    <div className="container mx-auto lg:px-8 lg:py-8">
+    <div className="">
       <div className="flex">
         <div className="w-64 max-h-[100vh] overflow-y-auto sticky top-20">
-    {/* <div className="w-64 fixed top-16 left-32 h-[calc(100vh-4rem)] overflow-y-auto bg-white shadow-md p-4"> */}
-
           <FilterSidebar
             filters={FilterConfig}
             selectedFilters={selectedFilters}
@@ -115,13 +128,87 @@ const ProductListComponent = () => {
         </div>
 
         <div className="flex-1 p-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* <div className="lg:w-1/5 w-full flex justify-center">
-                    <img src={verticalbanner} alt="Vertical Banner" className="w-full h-full object-cover" />
-                </div> */}
+          <div className="w-full flex justify-center">
+            <img
+              src={
+                "https://img.freepik.com/premium-vector/product-banner-podium-platform-with-geometric-shapes-nature-background_43880-464.jpg"
+              }
+              alt="Vertical Banner"
+              className="w-full h-48 object-cover"
+            />
+          </div>
+
+          <div className="flex items-center justify-between p-4 bg-gray-100 rounded-lg">
+            <div className="flex space-x-4">
+              <select className="px-3 py-2 border rounded-lg bg-white text-gray-700 focus:outline-none">
+                <option>Ascending Order</option>
+                <option>Descending Order</option>
+              </select>
+              <select className="px-3 py-2 border rounded-lg bg-white text-gray-700 focus:outline-none">
+                <option>10 Products</option>
+                <option>20 Products</option>
+                <option>50 Products</option>
+              </select>
+            </div>
+
+            <div className="flex space-x-2">
+              <button
+                onClick={() => changeGridLayout("lg:grid-cols-2")}
+                className={`p-2 rounded-lg ${
+                  selectedLayout === "lg:grid-cols-2"
+                    ? "bg-secondary text-white"
+                    : "border hover:bg-gray-200"
+                }`}
+              >
+                ▭▭
+              </button>
+              <button
+                onClick={() => changeGridLayout("lg:grid-cols-3")}
+                className={`p-2 rounded-lg ${
+                  selectedLayout === "lg:grid-cols-3"
+                    ? "bg-secondary text-white"
+                    : "border hover:bg-gray-200"
+                }`}
+              >
+                ▭▭▭
+              </button>
+              <button
+                onClick={() => changeGridLayout("lg:grid-cols-4")}
+                className={`p-2 rounded-lg ${
+                  selectedLayout === "lg:grid-cols-4"
+                    ? "bg-secondary text-white"
+                    : "border hover:bg-gray-200"
+                }`}
+              >
+                ▭▭▭▭
+              </button>
+              <button
+                onClick={() => changeGridLayout("lg:grid-cols-1")}
+                className={`p-2 rounded-lg ${
+                  selectedLayout === "lg:grid-cols-1"
+                    ? "bg-secondary text-white"
+                    : "border hover:bg-gray-200"
+                }`}
+              >
+                ☰
+              </button>
+            </div>
+          </div>
+
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 ${gridColumns} gap-6`}
+          >
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
+          </div>
+
+          <div className="flex flex-col items-center p-6">
+            <Pagination
+              totalPages={totalPages}
+              currentPage={currentPage}
+              onPageChange={handlePageChange}
+            />
           </div>
         </div>
       </div>

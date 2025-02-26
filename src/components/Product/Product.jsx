@@ -8,23 +8,25 @@ const images = [
 ];
 
 export default function ProductImageSlider() {
-  const [selectedImage, setSelectedImage] = useState(images[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    const index = images.indexOf(selectedImage);
-    setSelectedImage(images[index === 0 ? images.length - 1 : index - 1]);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   };
 
   const handleNext = () => {
-    const index = images.indexOf(selectedImage);
-    setSelectedImage(images[index === images.length - 1 ? 0 : index + 1]);
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   return (
     <div className="w-full flex flex-col items-center p-4">
-      <div className="relative w-full max-w-md h-[500px] flex items-center justify-center bg-gray-100 overflow-hidden">
+      <div className="relative w-full max-w-md flex items-center justify-center bg-gray-100 overflow-hidden">
         <img
-          src={selectedImage}
+          src={images[currentIndex]}
           alt="Product"
           className="w-full max-h-full object-contain rounded-lg"
         />
@@ -47,9 +49,9 @@ export default function ProductImageSlider() {
           <div
             key={index}
             className={`w-24 h-24 border rounded-lg cursor-pointer p-1 ${
-              selectedImage === img ? "border-gray-900" : "border-gray-300"
+              currentIndex === index ? "border-gray-900" : "border-gray-300"
             }`}
-            onClick={() => setSelectedImage(img)}
+            onClick={() => setCurrentIndex(index)}
           >
             <img
               src={img}

@@ -44,7 +44,7 @@ const ProductSelection = () => {
             key={color.id}
             className={`border-2 rounded-md p-1 cursor-pointer transition-all duration-300 ${
               selectedColor === color.id
-                ? "border-orange-400"
+                ? "border-secondary"
                 : "border-gray-300"
             }`}
             onClick={() => setSelectedColor(color.id)}
@@ -74,7 +74,7 @@ const ProductSelection = () => {
         </button>
       </div>
 
-      <div className="flex justify-center mt-4 space-x-4">
+      <div className="flex justify-center mt-4 space-x-4 w-full">
         <Button onClick={() => console.log("Continue Shopping Clicked")}>
           Out Of Stock
         </Button>
@@ -82,35 +82,7 @@ const ProductSelection = () => {
           Buy Now
         </Button>
       </div>
-      <div className="w-full bg-gray-200 rounded-full flex items-center relative mt-8 h-6 overflow-hidden">
-        <div
-          className="h-full rounded-full"
-          style={{
-            width: `${progress}%`,
-            background: "linear-gradient(to right, #22c55e,rgb(93, 114, 39))",
-          }}
-        ></div>
-
-        <motion.div
-          className="absolute top-0 left-0 h-full w-full opacity-40"
-          style={{
-            background:
-              "linear-gradient(to right, #4ade80, #22c55e, rgb(93, 114, 39))",
-          }}
-          animate={{ x: ["-100%", "100%"] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-        ></motion.div>
-
-        <motion.div
-          className="absolute transform -translate-y-1/2"
-          initial={{ x: "0%" }}
-          animate={{ x: `${progress}%` }}
-          transition={{ duration: 2, repeat: Infinity }}
-          style={{ left: `${progress}%`, transform: "translateX(-100%)" }}
-        >
-          {/* <FaTruck className="text-secondary " /> */}
-        </motion.div>
-      </div>
+     
       <p className="text-sm text-gray-500 mt-2">
         Please Hurry Only {stockLeft} Left In Stock
       </p>

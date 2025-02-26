@@ -3,6 +3,8 @@ import FilterConfig from "./filterConfig";
 import FilterSidebar from "../CustomFilterComponent";
 import ProductCard from "./ProductCard";
 import Pagination from "../Pagination/Pagination";
+import NavbarMobile from "../Navbar/NavbarItemsMobile";
+import FilterSidebarMobile from "./FilterNavbar";
 
 const products = [
   {
@@ -91,8 +93,10 @@ const ProductListComponent = () => {
 
   const totalPages = 5;
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedLayout, setSelectedLayout] = useState("lg:grid-cols-2");
-  const [gridColumns, setGridColumns] = useState("lg:grid-cols-2");
+  const [selectedLayout, setSelectedLayout] = useState("lg:grid-cols-3");
+  const [gridColumns, setGridColumns] = useState("lg:grid-cols-3");
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
   const handlePageChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage);
@@ -119,7 +123,7 @@ const ProductListComponent = () => {
   return (
     <div className="">
       <div className="flex">
-        <div className="w-64 max-h-[100vh] overflow-y-auto sticky top-20">
+        <div className="w-64 max-h-[100vh] overflow-y-auto sticky top-20  hidden lg:block">
           <FilterSidebar
             filters={FilterConfig}
             selectedFilters={selectedFilters}
@@ -134,7 +138,7 @@ const ProductListComponent = () => {
                 "https://img.freepik.com/premium-vector/product-banner-podium-platform-with-geometric-shapes-nature-background_43880-464.jpg"
               }
               alt="Vertical Banner"
-              className="w-full h-48 object-cover"
+              className="w-full h-48 object-fit md:object-cover"
             />
           </div>
 
@@ -150,8 +154,16 @@ const ProductListComponent = () => {
                 <option>50 Products</option>
               </select>
             </div>
-
-            <div className="flex space-x-2">
+            <div className="flex space-x-2  lg:hidden">
+              <button
+                onClick={() => setIsNavbarOpen(true)}
+                className={`p-2 rounded-lg bg-secondary text-white"
+                     "border hover:bg-gray-200  `}
+              >
+                Filter
+              </button>
+            </div>
+            <div className="flex space-x-2 hidden lg:flex">
               <button
                 onClick={() => changeGridLayout("lg:grid-cols-2")}
                 className={`p-2 rounded-lg ${
@@ -210,6 +222,13 @@ const ProductListComponent = () => {
               onPageChange={handlePageChange}
             />
           </div>
+          <FilterSidebarMobile
+            isOpen={isNavbarOpen}
+            toggleSidebar={() => setIsNavbarOpen(false)}
+            filters={FilterConfig}
+            selectedFilters={selectedFilters}
+            onFilterChange={handleFilterChange}
+          />
         </div>
       </div>
     </div>

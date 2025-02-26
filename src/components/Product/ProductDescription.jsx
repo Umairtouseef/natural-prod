@@ -28,7 +28,7 @@ export default function ProductDescription() {
       </div>
       <p className="text-paragraph text-small mt-1">
         MRP:{" "}
-        <span className="text-medium text-red-500 font-semibold">$15.00</span>
+        <span className="text-small text-secondary font-semibold">$15.00</span>
       </p>
       <p className="text-small text-paragraph">Inclusive all taxes</p>
       <div className="flex items-center space-x-6 text-small text-heading mt-4">

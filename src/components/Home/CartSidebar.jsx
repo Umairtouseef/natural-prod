@@ -149,23 +149,23 @@ const Cart = ({ isOpen, setIsOpen }) => {
               </div>
 
               <div className="flex flex-col items-center space-y-2">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 border ">
                   <button
                     onClick={() => updateQuantity(item.id, -1)}
-                    className="border px-2 py-1 text-lg"
+                    className=" px-2 py-1 text-lg"
                   >
                     -
                   </button>
                   <span className="w-6 text-center">{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.id, 1)}
-                    className="border px-2 py-1 text-lg"
+                    className=" px-2 py-1 text-lg"
                   >
                     +
                   </button>
                   <button
                     onClick={() => removeItem(item.id)}
-                    className="text-gray-600"
+                    className="text-gray-600 px-2 py-1"
                   >
                     <FaTrash />
                   </button>

@@ -30,8 +30,7 @@ const StoreProfile = () => {
           Based in United States, Fashion store has been a Multikart member
           since May 15, 2017. Fashion Store is engaged in all kinds of western
           clothing. In the garment field, we have maintained 3 years of
-          exporting experience. Our company insists on the principle of
-          "Customer first, Quality uppermost."
+          exporting experience. "
         </p>
         <p className="mt-3">
           Based in United States, Fashion store has been a Multikart member

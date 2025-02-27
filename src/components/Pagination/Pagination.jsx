@@ -17,11 +17,10 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
           <button
             key={pageNum}
             onClick={() => onPageChange(pageNum)}
-            className={`px-3 py-2 border rounded font-secondary tracking-primary ${
-              currentPage === pageNum
-                ? "bg-secondary text-tertiary"
-                : "bg-primary text-mainText"
-            }`}
+            className={`px-3 py-2 border rounded font-secondary tracking-primary ${currentPage === pageNum
+              ? "bg-secondary text-tertiary"
+              : "bg-primary text-mainText"
+              }`}
           >
             {pageNum}
           </button>
@@ -29,7 +28,7 @@ const Pagination = ({ totalPages, currentPage, onPageChange }) => {
       })}
 
 
-      
+
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}

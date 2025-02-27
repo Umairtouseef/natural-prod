@@ -48,9 +48,8 @@ export default function ProductImageSlider() {
         {images.map((img, index) => (
           <div
             key={index}
-            className={`w-24 h-24 border rounded-lg cursor-pointer p-1 ${
-              currentIndex === index ? "border-gray-900" : "border-gray-300"
-            }`}
+            className={`w-24 h-24 border rounded-lg cursor-pointer p-1 ${currentIndex === index ? "border-gray-900" : "border-gray-300"
+              }`}
             onClick={() => setCurrentIndex(index)}
           >
             <img

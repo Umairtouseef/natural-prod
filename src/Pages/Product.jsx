@@ -4,7 +4,7 @@ import ProductPage from '../components/Product'
 const Product = () => {
   return (
     <>
-    <ProductPage/>
+      <ProductPage />
     </>
   )
 }

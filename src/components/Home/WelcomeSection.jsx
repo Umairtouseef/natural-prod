@@ -4,7 +4,7 @@ const WelcomeSection = () => {
     return (
         <section className="container mx-auto px-6 py-12 bg-white lg:mt-0 ">
 
-                <div className="text-center">
+            <div className="text-center">
                 <h4 className="text-secondary font-medium">About Us</h4>
                 <h2 className=" text-heading font-bold mt-2">WELCOME TO Marijuana STORE</h2>
                 <div className="w-20 border-t-4 border-secondary my-6 mx-auto"></div>
@@ -25,7 +25,7 @@ const WelcomeSection = () => {
                 </div>
 
                 <div className="relative w-full h-64 overflow-hidden rounded-lg">
-                    <img  
+                    <img
                         src="https://themes.pixelstrap.com/multikart/assets/images/marijuana/banner/2.png"
                         alt="Banner 2"
                         className="w-full h-full object-fit transition-transform duration-300 hover:scale-105 hover:opacity-90 cursor-pointer"

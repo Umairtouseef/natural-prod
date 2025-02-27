@@ -166,41 +166,37 @@ const ProductListComponent = () => {
             <div className="flex space-x-2 hidden lg:flex">
               <button
                 onClick={() => changeGridLayout("lg:grid-cols-2")}
-                className={`p-2 rounded-lg ${
-                  selectedLayout === "lg:grid-cols-2"
-                    ? "bg-secondary text-white"
-                    : "border hover:bg-gray-200"
-                }`}
+                className={`p-2 rounded-lg ${selectedLayout === "lg:grid-cols-2"
+                  ? "bg-secondary text-white"
+                  : "border hover:bg-gray-200"
+                  }`}
               >
                 ▭▭
               </button>
               <button
                 onClick={() => changeGridLayout("lg:grid-cols-3")}
-                className={`p-2 rounded-lg ${
-                  selectedLayout === "lg:grid-cols-3"
-                    ? "bg-secondary text-white"
-                    : "border hover:bg-gray-200"
-                }`}
+                className={`p-2 rounded-lg ${selectedLayout === "lg:grid-cols-3"
+                  ? "bg-secondary text-white"
+                  : "border hover:bg-gray-200"
+                  }`}
               >
                 ▭▭▭
               </button>
               <button
                 onClick={() => changeGridLayout("lg:grid-cols-4")}
-                className={`p-2 rounded-lg ${
-                  selectedLayout === "lg:grid-cols-4"
-                    ? "bg-secondary text-white"
-                    : "border hover:bg-gray-200"
-                }`}
+                className={`p-2 rounded-lg ${selectedLayout === "lg:grid-cols-4"
+                  ? "bg-secondary text-white"
+                  : "border hover:bg-gray-200"
+                  }`}
               >
                 ▭▭▭▭
               </button>
               <button
                 onClick={() => changeGridLayout("lg:grid-cols-1")}
-                className={`p-2 rounded-lg ${
-                  selectedLayout === "lg:grid-cols-1"
-                    ? "bg-secondary text-white"
-                    : "border hover:bg-gray-200"
-                }`}
+                className={`p-2 rounded-lg ${selectedLayout === "lg:grid-cols-1"
+                  ? "bg-secondary text-white"
+                  : "border hover:bg-gray-200"
+                  }`}
               >
                 ☰
               </button>

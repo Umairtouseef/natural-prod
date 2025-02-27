@@ -4,7 +4,7 @@ import ProductListPage from '../components/ProductList'
 const Products = () => {
   return (
     <>
-    <ProductListPage/>
+      <ProductListPage />
     </>
   )
 }

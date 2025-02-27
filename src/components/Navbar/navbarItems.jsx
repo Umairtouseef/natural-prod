@@ -89,12 +89,12 @@ const NavbarItems = () => {
                   fashionTypeCount <= 1
                     ? "grid-cols-1"
                     : fashionTypeCount <= 2
-                    ? "grid-cols-2"
-                    : fashionTypeCount <= 2
-                    ? "grid-cols-3"
-                    : fashionTypeCount <= 4
-                    ? "grid-cols-4"
-                    : "grid-cols-4";
+                      ? "grid-cols-2"
+                      : fashionTypeCount <= 2
+                        ? "grid-cols-3"
+                        : fashionTypeCount <= 4
+                          ? "grid-cols-4"
+                          : "grid-cols-4";
 
                 const dropdownPosition =
                   menuItem.title === "Feature" ? "left-[-500%]" : "left-0";

@@ -71,9 +71,8 @@ const Layout = ({ children }) => {
               onClick={handleWishlistClick}
             >
               <FaHeart
-                className={`w-5 h-5 ${
-                  isWishlistFilled ? "text-secondary" : "text-white"
-                }`}
+                className={`w-5 h-5 ${isWishlistFilled ? "text-secondary" : "text-white"
+                  }`}
               />
               Wishlist
             </a>

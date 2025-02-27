@@ -51,9 +51,8 @@ export default function ProductDescription() {
         </button>
       </div>
       <div
-        className={`${
-          openSection === "description" ? "block" : "hidden"
-        } p-3 text-small text-paragraph`}
+        className={`${openSection === "description" ? "block" : "hidden"
+          } p-3 text-small text-paragraph`}
       >
         High-quality gym coordinates for a stylish and comfortable workout.
       </div>
@@ -68,9 +67,8 @@ export default function ProductDescription() {
         </button>
       </div>
       <div
-        className={`${
-          openSection === "info" ? "block" : "hidden"
-        } p-3 text-small text-paragraph`}
+        className={`${openSection === "info" ? "block" : "hidden"
+          } p-3 text-small text-paragraph`}
       >
         <p className="font-semibold text-heading">Product Info</p>
         <ul className="list-disc pl-6 text-gray-700 grid gap-2">

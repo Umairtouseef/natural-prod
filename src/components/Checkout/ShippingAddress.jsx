@@ -30,7 +30,7 @@ const ShippingAddress = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedAddress, setSelectedAddress] = useState(null);
 
-  
+
   const countryOptions = ["Austria", "Germany", "France"];
   const stateOptions = ["Argentina/Ch", "California", "Texas"];
 
@@ -40,7 +40,7 @@ const ShippingAddress = () => {
     address: "",
     phone: "",
     country: countryOptions[0],
-    state: stateOptions[0], 
+    state: stateOptions[0],
     city: "",
     pincode: "",
   });
@@ -63,8 +63,8 @@ const ShippingAddress = () => {
     <div className="p-8">
       <AddressSelector
         addresses={addresses}
-        selectedAddress={selectedAddress} 
-        onSelect={setSelectedAddress} 
+        selectedAddress={selectedAddress}
+        onSelect={setSelectedAddress}
         onAddNew={() => setIsModalOpen(true)}
         fieldLabels={{
           title: "Shipping Address",

@@ -40,7 +40,7 @@ const FilterSidebar = ({ filters, selectedFilters, onFilterChange }) => {
                       onChange={() => onFilterChange(filter.key, option)}
                       className="form-checkbox text-secondary"
                     />
-                    <span  className="">{option}</span>
+                    <span className="">{option}</span>
                   </label>
                 ))}
 
@@ -49,11 +49,10 @@ const FilterSidebar = ({ filters, selectedFilters, onFilterChange }) => {
                   {filter.options.map((color, i) => (
                     <button
                       key={i}
-                      className={`w-6 h-6 rounded-full border border-gray-300 hover:border-secondary ${
-                        selectedFilters[filter.key]?.includes(color)
+                      className={`w-6 h-6 rounded-full border border-gray-300 hover:border-secondary ${selectedFilters[filter.key]?.includes(color)
                           ? "border-secondary"
                           : ""
-                      }`}
+                        }`}
                       style={{ backgroundColor: color }}
                       onClick={() => onFilterChange(filter.key, color)}
                     ></button>

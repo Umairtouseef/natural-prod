@@ -65,15 +65,13 @@ const NavbarMobile = ({ isOpen, toggleSidebar }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-700 ease-in-out ${
-        isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
+      className={`fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-700 ease-in-out ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
       onClick={toggleSidebar}
     >
       <div
-        className={`fixed right-0 top-0 w-80 h-full bg-white shadow-lg transition-transform duration-700 ease-in-out ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed right-0 top-0 w-80 h-full bg-white shadow-lg transition-transform duration-700 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative flex h-[calc(100vh-2rem)] w-full max-w-[20rem] border-b flex-col rounded-xl bg-white p-2 text-gray-700 shadow-xl">

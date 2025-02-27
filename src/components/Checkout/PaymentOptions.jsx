@@ -14,10 +14,10 @@ const addresses = [
     { id: "10", label: "CCAVENUE" },
     { id: "11", label: "PHONEPE" },
     { id: "12", label: "INSTAMOJO" },
-  ];
-  
-  console.log(addresses);
-  
+];
+
+console.log(addresses);
+
 
 const PaymentOption = () => {
     const [selectedAddress, setSelectedAddress] = useState(addresses[0].id);

@@ -42,11 +42,10 @@ const ProductSelection = () => {
         {colors.map((color) => (
           <div
             key={color.id}
-            className={`border-2 rounded-md p-1 cursor-pointer transition-all duration-300 ${
-              selectedColor === color.id
-                ? "border-secondary"
-                : "border-gray-300"
-            }`}
+            className={`border-2 rounded-md p-1 cursor-pointer transition-all duration-300 ${selectedColor === color.id
+              ? "border-secondary"
+              : "border-gray-300"
+              }`}
             onClick={() => setSelectedColor(color.id)}
           >
             <img
@@ -82,7 +81,7 @@ const ProductSelection = () => {
           Buy Now
         </Button>
       </div>
-     
+
       <p className="text-sm text-gray-500 mt-2">
         Please Hurry Only {stockLeft} Left In Stock
       </p>

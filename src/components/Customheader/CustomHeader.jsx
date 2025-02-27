@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomHeader = ({ title, breadcrumbs = [] }) => {
   const handleBack = () => {
-    window.history.back(); 
+    window.history.back();
   };
 
   return (
@@ -14,17 +14,17 @@ const CustomHeader = ({ title, breadcrumbs = [] }) => {
           {breadcrumbs.map((crumb, index) => (
             <span key={index}>
               {index !== 0 && " / "}
-              
-              {index === breadcrumbs.length - 2 ? ( 
-               
-                <span 
-                  onClick={handleBack} 
+
+              {index === breadcrumbs.length - 2 ? (
+
+                <span
+                  onClick={handleBack}
                   className="hover:text-secondary cursor-pointer"
                 >
                   {crumb}
                 </span>
               ) : (
-                    <span
+                <span
                   className={
                     index === breadcrumbs.length - 1
                       ? "font-semibold text-secondary"

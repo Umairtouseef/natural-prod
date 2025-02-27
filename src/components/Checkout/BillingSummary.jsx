@@ -9,12 +9,12 @@ const BillingSummary = () => {
     setTimeout(() => setCopiedIndex(null), 2000);
   };
 
-  return (  
+  return (
     <div className="p-6 rounded-lg shadow-md border border-gray-200 bg-primary">
       <h2 className="text-lg font-bold mb-4">Billing Summary</h2>
 
       <div className="grid grid-cols-2 gap-3 mb-4">
-        {["#HOLIDAY40", "#HOLIDAY40"].map((code, index) => (
+        {["#HOLIDAY40", "#HOLIDAY40"].map((code, index) => (  
           <div
             key={index}
             className="relative flex justify-between p-3 border border-gray-300 rounded-lg text-sm bg-white"

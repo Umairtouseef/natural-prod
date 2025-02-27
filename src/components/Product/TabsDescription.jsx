@@ -78,31 +78,28 @@ export default function TabsDescription() {
     <div className="p-6 bg-primary text-mainText font-secondary md:h-[650px] ">
       <div className="flex space-x-4  pb-4">
         <button
-          className={`px-4 py-2 font-tertiary rounded-md ${
-            activeTab === "description"
+          className={`px-4 py-2 font-tertiary rounded-md ${activeTab === "description"
               ? "bg-secondary text-white"
               : "text-heading border border-secondary"
-          }`}
+            }`}
           onClick={() => setActiveTab("description")}
         >
           Description
         </button>
         <button
-          className={`px-4 py-2 font-tertiary rounded-md ${
-            activeTab === "review"
+          className={`px-4 py-2 font-tertiary rounded-md ${activeTab === "review"
               ? "bg-secondary text-white"
               : "text-heading border border-secondary"
-          }`}
+            }`}
           onClick={() => setActiveTab("review")}
         >
           Review
         </button>
         <button
-          className={`px-4 py-2 font-tertiary rounded-md ${
-            activeTab === "qa"
+          className={`px-4 py-2 font-tertiary rounded-md ${activeTab === "qa"
               ? "bg-secondary text-white"
               : "text-heading border border-secondary"
-          }`}
+            }`}
           onClick={() => setActiveTab("qa")}
         >
           Q & A
@@ -216,9 +213,8 @@ export default function TabsDescription() {
                       {Array.from({ length: 5 }, (_, index) => (
                         <span
                           key={index}
-                          className={`text-yellow-400 text-lg ${
-                            index < review.rating ? "opacity-100" : "opacity-50"
-                          }`}
+                          className={`text-yellow-400 text-lg ${index < review.rating ? "opacity-100" : "opacity-50"
+                            }`}
                         >
                           ★
                         </span>

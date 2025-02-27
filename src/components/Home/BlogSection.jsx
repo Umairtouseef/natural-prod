@@ -37,7 +37,7 @@ const BlogSection = () => {
         "https://themes.pixelstrap.com/multikart/assets/images/logos/11.png",
         "https://themes.pixelstrap.com/multikart/assets/images/logos/12.png",
         "https://themes.pixelstrap.com/multikart/assets/images/logos/12.png",
-      ];
+    ];
 
     return (
         <>
@@ -73,31 +73,31 @@ const BlogSection = () => {
             </div>
 
 
-             <div className="overflow-hidden bg-primary py-12">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center">
-          {logos.map((src, index) => (
-            <motion.img
-              key={index}
-              src={src}
-              alt="Logo"
-              className="w-24 sm:w-28 md:w-32 h-auto object-contain cursor-pointer"
-              initial={{ opacity: 0.5, scale: 0.9 }}
-              animate={{ opacity: 0.5, scale: 1 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
-              whileHover={{ opacity: 1, scale: 1.1, transition: { duration: 0.2 } }}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-       
+            <div className="overflow-hidden bg-primary py-12">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 place-items-center">
+                        {logos.map((src, index) => (
+                            <motion.img
+                                key={index}
+                                src={src}
+                                alt="Logo"
+                                className="w-24 sm:w-28 md:w-32 h-auto object-contain cursor-pointer"
+                                initial={{ opacity: 0.5, scale: 0.9 }}
+                                animate={{ opacity: 0.5, scale: 1 }}
+                                transition={{ duration: 0.3, delay: index * 0.1 }}
+                                whileHover={{ opacity: 1, scale: 1.1, transition: { duration: 0.2 } }}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
 
 
 
 
 
-       </>
+
+        </>
 
     );
 };

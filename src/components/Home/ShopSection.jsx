@@ -136,8 +136,8 @@ const ProductFilter = () => {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`cursor-pointer font-bold text-h4 py-2 border-b lg:border-none border-gray-500 transition-colors whitespace-nowrap ${activeCategory === category
-                                        ? "text-tertiary font-bold"
-                                        : "text-white"
+                                    ? "text-tertiary font-bold"
+                                    : "text-white"
                                     }`}
                             >
                                 {category}
@@ -230,8 +230,8 @@ const ProductFilter = () => {
                                     </div>
                                 </SwiperSlide>
                             ))}
-                             <div className="swiper-button-prev !text-white !text-4xl"></div>
-                             <div className="swiper-button-next !text-white !text-4xl"></div>
+                            <div className="swiper-button-prev !text-white !text-4xl"></div>
+                            <div className="swiper-button-next !text-white !text-4xl"></div>
                         </Swiper>
                     ) : (
                         <div className="flex justify-center items-center w-full ">

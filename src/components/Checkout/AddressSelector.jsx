@@ -50,11 +50,10 @@ const AddressSelector = ({
         {addresses.map((address) => (
           <label
             key={address.id}
-            className={`${addressBoxStyle} ${
-              selectedAddress === address.id
+            className={`${addressBoxStyle} ${selectedAddress === address.id
                 ? selectedBoxStyle
                 : unselectedBoxStyle
-            }`}
+              }`}
           >
             <input
               type="radio"

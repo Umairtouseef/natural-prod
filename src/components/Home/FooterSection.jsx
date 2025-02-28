@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
+import EcommerceChatbot from "../Chatbot/Chatbot";
 const logo = "/assets/footerlogo.png";
 
 const Footer = () => {
@@ -87,14 +88,22 @@ const Footer = () => {
         </div>
       </div>
 
-      {showScroll && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-secondary text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform"
-        >
-          <FaArrowUp size={20} />
-        </button>
-      )}
+      <div className="fixed bottom-6 right-6 flex flex-col items-end space-y-4">
+        <div className="relative mb-16">
+          <EcommerceChatbot />
+        </div>
+
+        {showScroll && (
+          <div className="relative">
+            <button
+              onClick={scrollToTop}
+              className="bg-secondary text-white p-3 mb-16 rounded-full shadow-lg hover:scale-110 transition-transform"
+            >
+              <FaArrowUp size={32} />
+            </button>
+          </div>
+        )}
+      </div>
     </footer>
   );
 };

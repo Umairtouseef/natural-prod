@@ -103,7 +103,7 @@ const NavbarItems = () => {
                   <div key={index} className="relative w-full ml-5  ">
                     <div className="relative flex items-center w-full p-0  text-left select-none text-blue-gray-900 ml-5">
                       <span class="relative flex items-center justify-between w-full group cursor-pointer  ">
-                        <h4 onClick={() => navigate("/")} class="block   ml-5">
+                        <h4 onClick={() => navigate("/home")} class="block   ml-5">
                           {menuItem.title}
                         </h4>
                       </span>

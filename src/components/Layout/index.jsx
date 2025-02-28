@@ -7,7 +7,7 @@ import {
   FiSearch,
   FiSettings,
 } from "react-icons/fi";
-import { FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";  
 import { RiMenuUnfoldLine } from "react-icons/ri";
 import { RiMenuUnfold2Line } from "react-icons/ri";
 import { FaHeart, FaUser } from "react-icons/fa";
@@ -96,7 +96,7 @@ const Layout = ({ children }) => {
             </button>
             <div>
               <img
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/home")}
                 src={logo}
                 alt="Naturekart Logo"
                 className="w-40 h-30 cursor-pointer"

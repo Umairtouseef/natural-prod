@@ -56,7 +56,7 @@ export default function EcommerceChatbot() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-1000">
       <button
         onClick={toggleChat}
         className="bg-secondary text-white p-4 rounded-full shadow-lg flex items-center justify-center 
@@ -83,19 +83,17 @@ export default function EcommerceChatbot() {
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`flex items-center space-x-2 ${
-                  msg.sender === "user" ? "justify-end" : "justify-start"
-                }`}
+                className={`flex items-center space-x-2 ${msg.sender === "user" ? "justify-end" : "justify-start"
+                  }`}
               >
                 {msg.sender === "bot" && (
                   <FaRobot size={24} className="text-secondary" />
                 )}
                 <div
-                  className={`p-2 rounded-lg max-w-[75%] ${
-                    msg.sender === "user"
+                  className={`p-2 rounded-lg max-w-[75%] ${msg.sender === "user"
                       ? "bg-secondary text-white self-end"
                       : "bg-transparent text-text self-start"
-                  }`}
+                    }`}
                 >
                   {msg.text}
                 </div>

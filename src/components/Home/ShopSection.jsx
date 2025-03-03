@@ -128,7 +128,7 @@ const ProductFilter = () => {
             <div className="absolute inset-0 bg-black opacity-60" />
 
             <div className="relative flex flex-col justify-center items-center lg:flex-row gap-8 w-full">
-                <aside className="w-full lg:w-[25%] p-6 text-white z-10">
+                <aside className="w-full lg:w-[25%] p-6 text-white ">
                     <h4 className="text-h2 font-bold text-tertiary">Our Shop</h4>
                     <h3 className="font-medium text-white mt-2 mb-4">Buy Products</h3>
 

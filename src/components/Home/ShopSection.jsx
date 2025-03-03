@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
 
 const categories = [
     "Cannabis Oils",
@@ -115,6 +116,7 @@ const ProductFilter = () => {
     );
 
     return (
+
         <div className="relative px-8 py-8 flex flex-col lg:flex-row w-full">
             <div
                 className="absolute inset-0 bg-cover bg-center"
@@ -172,62 +174,65 @@ const ProductFilter = () => {
                                     key={product.id}
                                     className="flex justify-center items-center"
                                 >
-                                    <div className="relative group border rounded-lg overflow-hidden shadow-md hover:shadow-lg bg-white w-full max-w-[350px] min-h-[400px]">
-                                        <div className="relative w-full h-64">
-                                            <img
-                                                src={product.image}
-                                                alt={product.name}
-                                                className="w-full h-full object-cover"
-                                            />
-                                            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            <div className="absolute bottom-2 left-2 right-2 flex flex-col items-center opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 transition-all duration-300 ease-out">
-                                                <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
-                                                    <FaSearch size={15} />
-                                                </button>
-                                                <button className="bg-white text-secondary px-6 py-2 mb-3 transition duration-300 hover:bg-secondary hover:text-white mt-1">
-                                                    Add to Cart
-                                                </button>
-                                                <div className="flex gap-4">
+                                    <Link to='/product'>
+
+                                        <div className="relative group border rounded-lg overflow-hidden shadow-md hover:shadow-lg bg-white w-full max-w-[350px] min-h-[400px]">
+                                            <div className="relative w-full h-64">
+                                                <img
+                                                    src={product.image}
+                                                    alt={product.name}
+                                                    className="w-full h-full object-cover"
+                                                />
+                                                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                                <div className="absolute bottom-2 left-2 right-2 flex flex-col items-center opacity-0 group-hover:opacity-100 translate-y-5 group-hover:translate-y-0 transition-all duration-300 ease-out">
                                                     <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
-                                                        <FaHeart size={15} />
+                                                        <FaSearch size={15} />
                                                     </button>
-                                                    <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
-                                                        <FaShoppingCart size={15} />
+                                                    <button className="bg-white text-secondary px-6 py-2 mb-3 transition duration-300 hover:bg-secondary hover:text-white mt-1">
+                                                        Add to Cart
                                                     </button>
+                                                    <div className="flex gap-4">
+                                                        <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
+                                                            <FaHeart size={15} />
+                                                        </button>
+                                                        <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
+                                                            <FaShoppingCart size={15} />
+                                                        </button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div className="p-4 text-center">
-                                            <div className="flex justify-center space-x-1 text-yellow-500 mb-2">
-                                                {[...Array(5)].map((_, i) => (
-                                                    <span
-                                                        key={i}
-                                                        className={
-                                                            i < product.rating
-                                                                ? "text-yellow-500"
-                                                                : "text-gray-300"
-                                                        }
-                                                    >
-                                                        ★
+                                            <div className="p-4 text-center">
+                                                <div className="flex justify-center space-x-1 text-yellow-500 mb-2">
+                                                    {[...Array(5)].map((_, i) => (
+                                                        <span
+                                                            key={i}
+                                                            className={
+                                                                i < product.rating
+                                                                    ? "text-yellow-500"
+                                                                    : "text-gray-300"
+                                                            }
+                                                        >
+                                                            ★
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                                <h3 className="text-lg font-semibold text-heading">
+                                                    {product.name}
+                                                </h3>
+                                                <p className="text-grayText">
+                                                    <span className="text-black font-bold">
+                                                        {product.price}
                                                     </span>
-                                                ))}
+                                                    {product.oldPrice && (
+                                                        <span className="text-gray-500 line-through ml-2">
+                                                            {product.oldPrice}
+                                                        </span>
+                                                    )}
+                                                </p>
                                             </div>
-                                            <h3 className="text-lg font-semibold text-heading">
-                                                {product.name}
-                                            </h3>
-                                            <p className="text-grayText">
-                                                <span className="text-black font-bold">
-                                                    {product.price}
-                                                </span>
-                                                {product.oldPrice && (
-                                                    <span className="text-gray-500 line-through ml-2">
-                                                        {product.oldPrice}
-                                                    </span>
-                                                )}
-                                            </p>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </SwiperSlide>
                             ))}
                             <div className="swiper-button-prev !text-white !text-4xl"></div>

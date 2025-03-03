@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaHeart, FaShoppingCart, FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const products = [
     {
@@ -26,6 +27,8 @@ const products = [
 
 const ProductCard = ({ product }) => {
     return (
+        <Link to='/product'>
+
         <div className="relative group border rounded-lg overflow-hidden shadow-md hover:shadow-lg bg-white w-full sm:w-[350px]">
             <div className="relative w-full h-64">
                 <img
@@ -33,6 +36,7 @@ const ProductCard = ({ product }) => {
                     alt={product.name}
                     className="w-full h-full object-cover"
                 />
+
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button className="bg-white/90 text-secondary p-4 rounded-full transition duration-300 hover:bg-secondary hover:text-white">
                         <FaSearch size={15} />
@@ -68,6 +72,8 @@ const ProductCard = ({ product }) => {
                 </p>
             </div>
         </div>
+        </Link>
+
     );
 };
 

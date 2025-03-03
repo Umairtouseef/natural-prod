@@ -6,7 +6,8 @@ import ProductList from "../Home/ProductList";
 import BlogSection from "../Home/BlogSection";
 
 import { MdOutlineLocalShipping } from "react-icons/md";
-import { FaCreditCard, FaHeadset, FaBolt } from "react-icons/fa"; // Import correct icons
+import { FaCreditCard, FaHeadset, FaBolt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const features = [
     { title: "Free Shipping", desc: "On Orders Over $50", icon: <MdOutlineLocalShipping className="w-12 h-12 text-secondary" /> },
@@ -31,10 +32,12 @@ const HeroSection = () => {
                             <h1 className=" text-white  font-bold mb-6">
                                 Buy Marijuana
                             </h1>
-
+                            <Link to="/products">
                             <button className="bg-theme-gradient hover:bg-primary text-white px-8 py-3 rounded-md">
                                 Shop Now
                             </button>
+                            </Link>
+                          
                         </div>
                     </div>
                 </div>
@@ -44,7 +47,7 @@ const HeroSection = () => {
                         {features.map((feature, index) => (
                             <div key={index} className="bg-white/90 p-6 text-center cursor-pointer">
                                 <motion.div
-                                    className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+                                        className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
                                     whileHover={{}}
                                     transition={{ duration: 0.3 }}
                                 >

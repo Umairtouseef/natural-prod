@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const WelcomeSection = () => {
     return (
@@ -17,19 +18,27 @@ const WelcomeSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
                 <div className="relative w-full h-64 overflow-hidden rounded-lg">
-                    <img
-                        src="https://themes.pixelstrap.com/multikart/assets/images/marijuana/banner/1.png"
-                        alt="Banner 1"
-                        className="w-full h-full object-fit transition-transform duration-300 hover:scale-105 hover:opacity-90 cursor-pointer"
-                    />
+                    <Link to="/product">
+                        <img
+                            src="https://themes.pixelstrap.com/multikart/assets/images/marijuana/banner/1.png"
+                            alt="Banner 1"
+                            className="w-full h-full object-fit transition-transform duration-300 hover:scale-105 hover:opacity-90 cursor-pointer"
+                        />
+                    </Link>
+
                 </div>
 
                 <div className="relative w-full h-64 overflow-hidden rounded-lg">
-                    <img
-                        src="https://themes.pixelstrap.com/multikart/assets/images/marijuana/banner/2.png"
-                        alt="Banner 2"
-                        className="w-full h-full object-fit transition-transform duration-300 hover:scale-105 hover:opacity-90 cursor-pointer"
-                    />
+                    <Link to="/product">
+
+                        <img
+                            src="https://themes.pixelstrap.com/multikart/assets/images/marijuana/banner/2.png"
+                            alt="Banner 2"
+
+                            className="w-full h-full object-fit transition-transform duration-300 hover:scale-105 hover:opacity-90 cursor-pointer"
+                        />
+                    </Link>
+
                 </div>
             </div>
 

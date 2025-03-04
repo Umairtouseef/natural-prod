@@ -8,7 +8,7 @@ import Product from "./src/Pages/Product";
 import Login from "./src/components/Login/Login";
 import Register from "./src/components/SignUp/SignUp";
 import logo from "./public/assets/feviconmain.png";
-import ScrollToTop from "./src/components/ScrollErrorFree/ScrollErrorFree";
+import ScrollToTop from "./src/components/ScrollToTop/ScrollToTop";
 
 const LoadingScreen = () => {
   return (
@@ -31,7 +31,7 @@ const App = () => {
   }
 
   return (
- 
+
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/home" element={<Home />} />
@@ -42,7 +42,7 @@ const App = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
     </Routes>
-    
+
 
   );
 };
@@ -50,8 +50,7 @@ const App = () => {
 const AppWrapper = () => {
   return (
     <Router>
-      <ScrollToTop/>
-
+      <ScrollToTop />
       <App />
     </Router>
   );
